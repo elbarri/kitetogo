@@ -1,0 +1,35 @@
+#!/bin/bash
+set -euo pipefail
+
+PORT="${1:-5434}"
+
+# Use macOS system SSH agent (Emacs overrides SSH_AUTH_SOCK for Zellij)
+export SSH_AUTH_SOCK=$(launchctl getenv SSH_AUTH_SOCK)
+
+# Kill any existing tunnel on this port (stale SSH or autossh)
+pkill -f "autossh.*${PORT}.*coolify-kitetogo" 2>/dev/null || true
+pkill -f "ssh.*${PORT}.*coolify-kitetogo" 2>/dev/null || true
+
+# Wait for port to be released
+for i in 1 2 3 4 5; do
+  lsof -i :"$PORT" &>/dev/null || break
+  sleep 0.5
+done
+
+IP=$(ssh facundo@coolify-kitetogo \
+  "sudo docker inspect p4owoksc4wkokoc040w04g4c --format '{{(index .NetworkSettings.Networks \"coolify\").IPAddress}}'")
+
+# Use autossh to auto-reconnect after laptop sleep.
+# AUTOSSH_POLL: how often (seconds) to check the connection is alive.
+# -M 0: disable autossh's own monitoring port, rely on SSH ServerAliveInterval instead.
+# ServerAliveInterval=10: send keepalive every 10s.
+# ServerAliveCountMax=3: drop after 3 missed keepalives (30s).
+export AUTOSSH_POLL=10
+autossh -M 0 -f -N \
+  -o "ServerAliveInterval=10" \
+  -o "ServerAliveCountMax=3" \
+  -o "ExitOnForwardFailure=yes" \
+  -L "$PORT:${IP}:5432" \
+  facundo@coolify-kitetogo
+
+echo "Tunnel open on port $PORT → ${IP}:5432 (autossh)"

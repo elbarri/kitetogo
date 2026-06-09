@@ -1,0 +1,71 @@
+bar:
+  de: "Bar"
+  en: "bar"
+  es: "barra"
+  fr: "barre"
+  it: "barra"
+  nl: "bar"
+
+board:
+  de: "Board"
+  en: "board"
+  es: "tabla"
+  fr: "planche"
+  it: "tavola"
+  nl: "board"
+
+harness:
+  de: "Trapez"
+  en: "harness"
+  es: "arnés"
+  fr: "harnais"
+  it: "trapezio"
+  nl: "harnas"
+
+helmet:
+  de: "Helm"
+  en: "helmet"
+  es: "casco"
+  fr: "casque"
+  it: "casco"
+  nl: "helm"
+
+kite:
+  de: "Kite"
+  en: "kite"
+  es: "kite"
+  fr: "kite"
+  it: "kite"
+  nl: "kite"
+
+leash:
+  de: "Leash"
+  en: "leash"
+  es: "leash"
+  fr: "leash"
+  it: "leash"
+  nl: "leash"
+
+pump:
+  de: "Pumpe"
+  en: "pump"
+  es: "inflador"
+  fr: "pompe"
+  it: "pompa"
+  nl: "pomp"
+
+vest:
+  de: "Weste"
+  en: "vest"
+  es: "chaleco"
+  fr: "gilet"
+  it: "giubbotto"
+  nl: "vest"
+
+wetsuit:
+  de: "Neoprenanzug"
+  en: "wetsuit"
+  es: "neopreno"
+  fr: "combinaison"
+  it: "muta"
+  nl: "wetsuit"

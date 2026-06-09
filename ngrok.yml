@@ -1,0 +1,6 @@
+version: "3"
+tunnels:
+  unicorn-tunnel:
+    proto: http
+    addr: host.docker.internal:4000
+    domain: unicorn-neutral-louse.ngrok-free.app

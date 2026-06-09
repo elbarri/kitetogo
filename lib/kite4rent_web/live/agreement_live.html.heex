@@ -1,0 +1,677 @@
+<div class="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto">
+    <!-- Header with status and Google Translate link -->
+    <div class="flex justify-between items-start mb-6">
+      <div>
+        <h1 class="text-3xl font-bold text-gray-900">Kitesurfing Gear Rental Agreement</h1>
+        <p class="text-sm text-gray-500 mt-1">Valid only for this transaction</p>
+      </div>
+      <div class="flex flex-col items-end gap-2">
+        <span class={"px-3 py-1 rounded-full text-sm font-medium #{status_color(@agreement.status)}"}>
+          <%= status_label(@agreement.status) %>
+        </span>
+        <a
+          href={"https://translate.google.com/translate?sl=auto&tl=auto&u=#{URI.encode((Application.get_env(:kite4rent, :base_url) || "http://localhost:4000") <> "/agreement/#{@agreement.uuid}")}"}
+          target="_blank"
+          class="text-xs text-blue-600 hover:text-blue-800"
+        >
+          Translate this page
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Agreement Content -->
+    <div class="bg-white shadow rounded-lg overflow-hidden">
+      <!-- Preamble -->
+      <div class="px-6 py-4 border-b border-gray-200">
+        <p class="text-sm text-gray-700 italic">
+          This rental contract concluded in writing, freely and in good faith is mutually agreed to and will be governed by the provisions of the following clauses:
+        </p>
+      </div>
+
+      <!-- Section 1: Parties -->
+      <div class="border-b border-gray-200 px-6 py-4">
+        <h2 class="text-lg font-semibold text-gray-900 mb-3">1. Parties</h2>
+        <%= if @role == :owner && @agreement.status in ["draft", "negotiating"] do %>
+          <!-- Editable form for owner -->
+          <form phx-submit="save_agreement" class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Owner info -->
+              <div class="p-4 bg-blue-50 rounded-lg">
+                <h3 class="text-sm font-medium text-gray-700 mb-3">Owner</h3>
+                <div class="space-y-3">
+                  <div>
+                    <label for="owner_name" class="text-sm text-gray-600 block">Full Name</label>
+                    <input
+                      type="text"
+                      name="owner_name"
+                      id="owner_name"
+                      value={get_owner_name(@agreement)}
+                      placeholder="Your full legal name"
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label for="owner_email" class="text-sm text-gray-600 block">Email</label>
+                    <input
+                      type="email"
+                      name="owner_email"
+                      id="owner_email"
+                      value={get_owner_email(@agreement)}
+                      placeholder="your@email.com"
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm"
+                    />
+                  </div>
+                  <div>
+                    <span class="text-sm text-gray-500">WhatsApp:</span>
+                    <span class="text-sm text-gray-700">+<%= @agreement.security_deposit.owner.whatsapp %></span>
+                  </div>
+                </div>
+              </div>
+              <!-- Renter info -->
+              <div class="p-4 bg-gray-50 rounded-lg">
+                <h3 class="text-sm font-medium text-gray-700 mb-3">Renter</h3>
+                <div class="space-y-3">
+                  <div>
+                    <label for="renter_name" class="text-sm text-gray-600 block">Full Name</label>
+                    <input
+                      type="text"
+                      name="renter_name"
+                      id="renter_name"
+                      value={get_renter_name(@agreement)}
+                      placeholder="Renter's full legal name"
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label for="renter_email" class="text-sm text-gray-600 block">Email</label>
+                    <input
+                      type="email"
+                      name="renter_email"
+                      id="renter_email"
+                      value={get_renter_email(@agreement)}
+                      placeholder="renter@email.com"
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm"
+                    />
+                  </div>
+                  <%= if @agreement.security_deposit.renter do %>
+                    <div>
+                      <span class="text-sm text-gray-500">WhatsApp:</span>
+                      <span class="text-sm text-gray-700">+<%= @agreement.security_deposit.renter.whatsapp %></span>
+                    </div>
+                  <% else %>
+                    <p class="text-sm text-gray-500 italic">Renter not yet assigned</p>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 text-sm"
+            >
+              Save Changes
+            </button>
+          </form>
+        <% else %>
+          <!-- Read-only view -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="text-sm font-medium text-gray-700">Owner</h3>
+              <p class="text-sm text-gray-900"><%= get_owner_name(@agreement) %></p>
+              <%= if get_owner_email(@agreement) != "" do %>
+                <p class="text-sm text-gray-500"><%= get_owner_email(@agreement) %></p>
+              <% end %>
+              <p class="text-sm text-gray-500">+<%= @agreement.security_deposit.owner.whatsapp %></p>
+            </div>
+            <div>
+              <h3 class="text-sm font-medium text-gray-700">Renter</h3>
+              <%= if @agreement.security_deposit.renter do %>
+                <p class="text-sm text-gray-900"><%= get_renter_name(@agreement) %></p>
+                <%= if get_renter_email(@agreement) != "" do %>
+                  <p class="text-sm text-gray-500"><%= get_renter_email(@agreement) %></p>
+                <% end %>
+                <p class="text-sm text-gray-500">+<%= @agreement.security_deposit.renter.whatsapp %></p>
+              <% else %>
+                <p class="text-sm text-gray-500">Not yet assigned</p>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <!-- Section 2: Rental Period -->
+      <div class="border-b border-gray-200 px-6 py-4">
+        <h2 class="text-lg font-semibold text-gray-900 mb-3">2. Rental Period</h2>
+        <%= if @role == :owner && @agreement.status in ["draft", "negotiating"] do %>
+          <!-- Editable form for owner -->
+          <form phx-submit="save_agreement" class="space-y-4">
+            <dl class="grid grid-cols-2 gap-4">
+              <div>
+                <label for="duration_hours" class="text-sm text-gray-500 block">Duration (hours)</label>
+                <div class="flex items-center gap-2 mt-1">
+                  <input
+                    type="number"
+                    name="duration_hours"
+                    id="duration_hours"
+                    value={@agreement.security_deposit.duration_hours}
+                    min="2"
+                    max="72"
+                    phx-blur="update_duration"
+                    class="w-20 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm"
+                  />
+                  <span class="text-xs text-gray-400">(2-72)</span>
+                </div>
+              </div>
+              <div>
+                <label for="return_location" class="text-sm text-gray-500 block">Return Location</label>
+                <input
+                  type="text"
+                  name="return_location"
+                  id="return_location"
+                  value={@agreement.return_location || ""}
+                  placeholder="e.g., Beach parking lot, Tarifa"
+                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm"
+                />
+              </div>
+            </dl>
+            <div>
+              <label for="condition_notes" class="text-sm text-gray-500 block">Condition Notes (existing damage/wear)</label>
+              <textarea
+                name="condition_notes"
+                id="condition_notes"
+                rows="2"
+                placeholder="e.g., Small scratch on left rail, bladder repaired in 2023"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm"
+              ><%= @agreement.condition_notes || "" %></textarea>
+            </div>
+            <button
+              type="submit"
+              class="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 text-sm"
+            >
+              Save Changes
+            </button>
+          </form>
+        <% else %>
+          <!-- Read-only view -->
+          <dl class="grid grid-cols-2 gap-4">
+            <div>
+              <dt class="text-sm text-gray-500">Duration</dt>
+              <dd class="text-sm font-medium text-gray-900">
+                <%= @agreement.security_deposit.duration_hours %> hours
+              </dd>
+            </div>
+            <div>
+              <dt class="text-sm text-gray-500">Return Location</dt>
+              <dd class="text-sm font-medium text-gray-900">
+                <%= @agreement.return_location || "To be specified" %>
+              </dd>
+            </div>
+          </dl>
+        <% end %>
+      </div>
+
+      <!-- Section 3: Gear Rented & Values -->
+      <div class="border-b border-gray-200 px-6 py-4">
+        <h2 class="text-lg font-semibold text-gray-900 mb-3">3. Gear Rented & Stated Values</h2>
+        <%= if @role == :owner && @agreement.status in ["draft", "negotiating"] do %>
+          <!-- Editable values for owner -->
+          <form phx-submit="update_item_values">
+            <table class="min-w-full">
+              <thead>
+                <tr class="border-b border-gray-200">
+                  <th class="text-left text-xs font-medium text-gray-500 uppercase py-2">Item</th>
+                  <th class="text-left text-xs font-medium text-gray-500 uppercase py-2">Details</th>
+                  <th class="text-right text-xs font-medium text-gray-500 uppercase py-2">Replacement Value (<%= @agreement.security_deposit.currency %>)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <%= for item <- @agreement.security_deposit.items do %>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 text-sm text-gray-900">
+                      <%= format_gear_type(item.gear_type) %>
+                    </td>
+                    <td class="py-3 text-sm text-gray-600">
+                      <%= item.gear_brand %> <%= item.gear_model %> <%= item.gear_size %> (<%= item.gear_year %>)
+                    </td>
+                    <td class="py-3 text-sm text-gray-900 text-right">
+                      <input
+                        type="number"
+                        name={"item_values[#{item.id}]"}
+                        value={item.declared_value / 100}
+                        step="0.01"
+                        min="0"
+                        class="w-28 text-right rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm"
+                      />
+                    </td>
+                  </tr>
+                <% end %>
+              </tbody>
+              <tfoot>
+                <tr class="bg-gray-50">
+                  <td colspan="2" class="py-3 text-sm font-semibold text-gray-900">Total / Security Deposit</td>
+                  <td class="py-3 text-sm font-bold text-gray-900 text-right">
+                    <%= format_amount(@agreement.security_deposit.amount, @agreement.security_deposit.currency) %>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+            <div class="mt-3">
+              <button
+                type="submit"
+                class="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 text-sm"
+              >
+                Update Values
+              </button>
+              <span class="text-xs text-gray-500 ml-2">Total will be recalculated automatically</span>
+            </div>
+          </form>
+        <% else %>
+          <!-- Read-only view -->
+          <table class="min-w-full">
+            <thead>
+              <tr class="border-b border-gray-200">
+                <th class="text-left text-xs font-medium text-gray-500 uppercase py-2">Item</th>
+                <th class="text-left text-xs font-medium text-gray-500 uppercase py-2">Details</th>
+                <th class="text-right text-xs font-medium text-gray-500 uppercase py-2">Replacement Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= for item <- @agreement.security_deposit.items do %>
+                <tr class="border-b border-gray-100">
+                  <td class="py-3 text-sm text-gray-900">
+                    <%= format_gear_type(item.gear_type) %>
+                  </td>
+                  <td class="py-3 text-sm text-gray-600">
+                    <%= item.gear_brand %> <%= item.gear_model %> <%= item.gear_size %> (<%= item.gear_year %>)
+                  </td>
+                  <td class="py-3 text-sm text-gray-900 text-right font-medium">
+                    <%= format_cents(item.declared_value, @agreement.security_deposit.currency) %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+            <tfoot>
+              <tr class="bg-gray-50">
+                <td colspan="2" class="py-3 text-sm font-semibold text-gray-900">Total / Security Deposit</td>
+                <td class="py-3 text-sm font-bold text-gray-900 text-right">
+                  <%= format_amount(@agreement.security_deposit.amount, @agreement.security_deposit.currency) %>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        <% end %>
+      </div>
+
+      <!-- Section 4: Condition Check -->
+      <div class="border-b border-gray-200 px-6 py-4" id="photos-section">
+        <h2 class="text-lg font-semibold text-gray-900 mb-3">4. Condition Check</h2>
+
+        <%= if @agreement.condition_notes do %>
+          <div class="mb-4">
+            <h3 class="text-sm font-medium text-gray-700 mb-1">Notes on existing damage/wear:</h3>
+            <p class="text-sm text-gray-600 bg-gray-50 p-3 rounded"><%= @agreement.condition_notes %></p>
+          </div>
+        <% end %>
+
+        <!-- Photos - Updates in real-time via LiveView -->
+        <%= if length(@agreement.photos) > 0 do %>
+          <h3 class="text-sm font-medium text-gray-700 mb-2">Gear Condition Photos (<%= length(@agreement.photos) %>)</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            <%= for {photo, index} <- Enum.with_index(@agreement.photos) do %>
+              <div class="relative group">
+                <img
+                  src={"/media/#{Path.basename(photo.file_path)}"}
+                  alt={photo.description || "Gear condition"}
+                  class="w-full h-32 object-cover rounded-lg border border-gray-200 cursor-pointer hover:opacity-90 transition-opacity"
+                  phx-click="open_lightbox"
+                  phx-value-index={index}
+                />
+                <%= if @role == :owner && @agreement.status in ["draft", "negotiating"] do %>
+                  <button
+                    type="button"
+                    phx-click="delete_photo"
+                    phx-value-id={photo.id}
+                    class="absolute top-1 right-1 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-600"
+                    title="Remove photo"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                <% end %>
+                <%= if photo.description do %>
+                  <p class="text-xs text-gray-500 mt-1 truncate"><%= photo.description %></p>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+          <%= if @role == :owner && @agreement.status in ["draft", "negotiating"] do %>
+            <p class="text-xs text-green-600 mt-2">
+              Send photos via WhatsApp - they'll appear here automatically.
+            </p>
+          <% end %>
+        <% else %>
+          <p class="text-sm text-gray-500 italic">No photos uploaded yet.</p>
+          <%= if @role == :owner && @agreement.status in ["draft", "negotiating"] do %>
+            <p class="text-xs text-green-600 mt-2">
+              Send photos via WhatsApp - they'll appear here automatically.
+            </p>
+          <% end %>
+        <% end %>
+      </div>
+
+      <!-- Section 5: Renter Promises -->
+      <div class="border-b border-gray-200 px-6 py-4">
+        <h2 class="text-lg font-semibold text-gray-900 mb-3">5. Renter Promises</h2>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li class="flex items-start">
+            <span class="text-green-500 mr-2">*</span>
+            I will use the gear only for kitesurfing and only in conditions suitable for my skill level.
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-500 mr-2">*</span>
+            I will not lend or sub-rent the gear to anyone else.
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-500 mr-2">*</span>
+            I will return the gear clean, (ideally) dry, and on time at the agreed place.
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-500 mr-2">*</span>
+            I am responsible for loss, theft, or damage beyond normal wear and tear.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 6: Normal Wear and Tear -->
+      <div class="border-b border-gray-200 px-6 py-4">
+        <h2 class="text-lg font-semibold text-gray-900 mb-3">6. Normal Wear and Tear (no charge)</h2>
+        <ul class="text-sm text-gray-700 space-y-1">
+          <li>* Light sand scratches on board</li>
+          <li>* Minor salt marks or light fading</li>
+        </ul>
+      </div>
+
+      <!-- Section 7: Damage & Repair Rules -->
+      <div class="border-b border-gray-200 px-6 py-4">
+        <h2 class="text-lg font-semibold text-gray-900 mb-3">7. Damage & Repair Rules</h2>
+        <table class="min-w-full text-sm">
+          <thead>
+            <tr class="border-b border-gray-200">
+              <th class="text-left py-2 text-gray-500 font-medium">Type of damage</th>
+              <th class="text-left py-2 text-gray-500 font-medium">How it is handled</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+            <tr class="border-b border-gray-100">
+              <td class="py-2">Minor repairable damage (e.g. small bladder leak, valve fix)</td>
+              <td class="py-2">Actual repair cost - no extra depreciation</td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="py-2">Visible canopy tear or patch (up to 10cm/4in)</td>
+              <td class="py-2">Repair cost + 15% depreciation of the kite's stated value</td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="py-2">Major tear / strut explosion / broken spar</td>
+              <td class="py-2">Repair cost + 50% depreciation of the kite's stated value</td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="py-2">Total loss or unrepairable kite/board</td>
+              <td class="py-2">Full stated replacement value of the item</td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="py-2">Broken bar/board (bent, cracked) or lines</td>
+              <td class="py-2">Actual replacement cost of the part - no depreciation</td>
+            </tr>
+            <tr>
+              <td class="py-2">Lost or stolen gear</td>
+              <td class="py-2">Full stated replacement value of the lost item</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Section 8: Return & Deposit Refund -->
+      <div class="border-b border-gray-200 px-6 py-4">
+        <h2 class="text-lg font-semibold text-gray-900 mb-3">8. Return & Deposit Refund</h2>
+        <div class="space-y-3">
+          <p class="text-sm text-gray-700 font-medium">Upon return:</p>
+          <ul class="text-sm text-gray-700 space-y-2 ml-4">
+            <li>* Both parties will inspect the gear together at return.</li>
+            <li>* If everything is OK, deposit refunded within 48 hours.</li>
+          </ul>
+
+          <p class="text-sm text-gray-700 font-medium mt-4">If there is damage:</p>
+          <ol class="text-sm text-gray-700 space-y-2 ml-4 list-decimal">
+            <li>Open a dispute within 24 hours</li>
+            <li>Owner sends photos + one or more repair quotes</li>
+            <li>Both parties, guided by good faith, either:
+              <ul class="ml-4 mt-1 space-y-1">
+                <li>a) Agree on deduction amount, or</li>
+                <li>b) Delegate to KiteToGo to make the final call, aiming for the most just solution</li>
+              </ul>
+            </li>
+            <li>Agreed amount is deducted from deposit</li>
+            <li>Remainder is refunded to renter</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Section 9: Dispute Resolution Fees -->
+      <div class="border-b border-gray-200 px-6 py-4">
+        <h2 class="text-lg font-semibold text-gray-900 mb-3">9. Dispute Resolution Fees</h2>
+        <p class="text-sm text-gray-700">
+          When funds are deducted from the security deposit due to damage, the owner will arrange with KiteToGo to receive 95% of the deducted amount. This operation incurs a 5% processing fee to cover payment processing and dispute resolution costs.
+        </p>
+      </div>
+
+      <!-- Section 10: If Gear is Not Returned -->
+      <div class="border-b border-gray-200 px-6 py-4">
+        <h2 class="text-lg font-semibold text-gray-900 mb-3">10. If Gear is Not Returned</h2>
+        <p class="text-sm text-gray-700">
+          After 24 hours late without contact: considered stolen. Full stated value charged.
+        </p>
+      </div>
+
+      <!-- Section 11: Liability -->
+      <div class="border-b border-gray-200 px-6 py-4">
+        <h2 class="text-lg font-semibold text-gray-900 mb-3">11. Liability</h2>
+        <p class="text-sm text-gray-700">
+          Kitesurfing is a risky sport. The renter uses the gear at their own risk. The owner is not responsible for injuries or accidents.
+        </p>
+      </div>
+
+      <!-- Agreement Section -->
+      <div class="px-6 py-4 bg-gray-50">
+        <h2 class="text-lg font-semibold text-gray-900 mb-4">Agreement</h2>
+
+        <%= cond do %>
+          <% @role == :owner && @agreement.status in ["draft", "negotiating"] -> %>
+            <!-- Owner needs to review and submit -->
+            <div class="space-y-4">
+              <label class="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={@terms_accepted}
+                  phx-click="toggle_terms"
+                  class="mt-1 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                />
+                <span class="text-sm text-gray-700">
+                  I, the owner, have read and hereby accept all the terms above.
+                </span>
+              </label>
+
+              <div class="flex flex-col sm:flex-row gap-3">
+                <button
+                  phx-click="send_to_renter"
+                  disabled={!@terms_accepted}
+                  class={"px-4 py-2 rounded-md text-white #{if @terms_accepted, do: "bg-blue-600 hover:bg-blue-700", else: "bg-gray-400 cursor-not-allowed"}"}
+                >
+                  Agree & Submit to Renter for Review
+                </button>
+                <button
+                  onclick="window.print()"
+                  class="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
+                >
+                  Print Agreement
+                </button>
+              </div>
+            </div>
+
+          <% @role == :renter && @agreement.status == "pending_renter_review" -> %>
+            <!-- Renter needs to review and approve or request changes -->
+            <div class="space-y-4">
+              <label class="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={@terms_accepted}
+                  phx-click="toggle_terms"
+                  class="mt-1 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                />
+                <span class="text-sm text-gray-700">
+                  I, the renter, have read and hereby accept all the terms above.
+                </span>
+              </label>
+
+              <div class="flex flex-col sm:flex-row gap-3">
+                <button
+                  phx-click="approve_agreement"
+                  disabled={!@terms_accepted}
+                  class={"px-4 py-2 rounded-md text-white #{if @terms_accepted, do: "bg-green-600 hover:bg-green-700", else: "bg-gray-400 cursor-not-allowed"}"}
+                >
+                  Agree & Proceed to Pay the Security Deposit
+                </button>
+                <button
+                  phx-click="request_changes"
+                  class="px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700"
+                >
+                  Request Changes
+                </button>
+                <button
+                  onclick="window.print()"
+                  class="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
+                >
+                  Print Agreement
+                </button>
+              </div>
+            </div>
+
+          <% @agreement.status == "pending_renter_review" -> %>
+            <!-- Owner viewing while renter reviews -->
+            <p class="text-sm text-gray-600 mb-4">
+              Waiting for renter to review and approve the agreement.
+            </p>
+            <button
+              onclick="window.print()"
+              class="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
+            >
+              Print Agreement
+            </button>
+
+          <% @agreement.status in ["approved", "signed", "completed"] -> %>
+            <!-- Both parties agreed -->
+            <p class="text-sm text-gray-600 mb-4">
+              Both parties have agreed to the terms above.
+            </p>
+            <button
+              onclick="window.print()"
+              class="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
+            >
+              Print Agreement
+            </button>
+
+          <% true -> %>
+            <!-- Fallback for other statuses -->
+            <button
+              onclick="window.print()"
+              class="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
+            >
+              Print Agreement
+            </button>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="mt-8 text-center text-xs text-gray-400">
+      <p>Powered by KiteToGo - Kitesurfing Gear Rental Marketplace</p>
+      <p>Agreement ID: <%= @agreement.uuid %></p>
+    </div>
+  </div>
+</div>
+
+<!-- Photo Lightbox Modal -->
+<%= if @lightbox_open && length(@agreement.photos) > 0 do %>
+  <div
+    class="fixed inset-0 z-50 flex items-center justify-center"
+    phx-window-keydown="close_lightbox"
+    phx-key="Escape"
+  >
+    <!-- Backdrop with blur -->
+    <div
+      class="absolute inset-0 bg-black/80 backdrop-blur-sm"
+      phx-click="close_lightbox"
+    ></div>
+
+    <!-- Modal content -->
+    <div class="relative z-10 max-w-4xl max-h-[90vh] mx-4">
+      <!-- Close button -->
+      <button
+        type="button"
+        phx-click="close_lightbox"
+        class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Image container -->
+      <div class="relative">
+        <% current_photo = Enum.at(@agreement.photos, @lightbox_index) %>
+        <%= if current_photo do %>
+          <img
+            src={"/media/#{Path.basename(current_photo.file_path)}"}
+            alt={current_photo.description || "Gear condition photo"}
+            class="max-h-[80vh] max-w-full object-contain rounded-lg"
+          />
+
+          <!-- Caption -->
+          <%= if current_photo.description do %>
+            <p class="text-white text-center mt-2"><%= current_photo.description %></p>
+          <% end %>
+        <% end %>
+
+        <!-- Navigation arrows (only show if more than 1 photo) -->
+        <%= if length(@agreement.photos) > 1 do %>
+          <!-- Previous button -->
+          <button
+            type="button"
+            phx-click="lightbox_prev"
+            class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 text-white hover:text-gray-300 transition-colors p-2"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <!-- Next button -->
+          <button
+            type="button"
+            phx-click="lightbox_next"
+            class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 text-white hover:text-gray-300 transition-colors p-2"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        <% end %>
+      </div>
+
+      <!-- Photo counter -->
+      <div class="text-white text-center mt-4 text-sm">
+        <%= @lightbox_index + 1 %> / <%= length(@agreement.photos) %>
+      </div>
+    </div>
+  </div>
+<% end %>

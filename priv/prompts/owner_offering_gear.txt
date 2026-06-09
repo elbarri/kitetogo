@@ -1,0 +1,7 @@
+The following is the audio transcription of an owner/Lessor who is allegedly stating which kitesurfing gear he has available for rent.
+
+Your task is to categorize and list the kitesurfing gear the lessor is offering.
+
+This is the lessor's message transcript:
+
+"Hola, tengo una tabla Elevate"

@@ -1,0 +1,263 @@
+generic_error:
+  de: |
+    Oops! Es gab ein Problem bei der Verarbeitung Ihrer Nachricht.
+    Bitte versuchen Sie es erneut.
+  en: |
+    Oops! There was an issue processing your message.
+    Please try again.
+  es: |
+    Oops! Hubo un problema procesando tu mensaje.
+    Por favor intenta de nuevo.
+  fr: |
+    Oops! Il y a eu un problème lors du traitement de votre message.
+    Veuillez réessayer.
+  it: |
+    Oops! C'è stato un problema nell'elaborazione del tuo messaggio.
+    Riprova.
+  nl: |
+    Oops! Er was een probleem bij het verwerken van je bericht.
+    Probeer het opnieuw.
+
+intention_not_supported:
+  de: |
+    Hey! KiteToGo ermöglicht dir:
+
+    🌎 Einen Standort anhängen
+    🪁🪈🏄 Dein Equipment in deiner Gegend zur Miete anbieten
+    🔍 Ausrüstung überall auf der Welt finden
+    📋 Sehen, was du gelistet hast
+    🗑️ Dein Equipment löschen
+
+    Beispiele (Text oder Sprache):
+    • "Ich möchte meinen Kite Duotone Evo 12m aus dem Jahr 2022 vermieten"
+    • "Suche ein Board in Barcelona"
+    • "Zeig mir mein Equipment"
+    • "Lösche mein Equipment"
+
+    Du kannst auch Feedback zur App senden — Freundlichkeit ist willkommen.
+  en: |
+    Hey! KiteToGo lets you:
+
+    🌎 Attach a location
+    🪁🪈🏄 Offer your gear for rent in your area
+    🔍 Find gear anywhere in the world
+    📋 See what you have listed
+    🗑️ Delete your gear
+
+    Examples (text or voice):
+    • "I want to rent out my kite Duotone Evo 12m year 2022"
+    • "Looking for a board in Barcelona"
+    • "Show me my gear"
+    • "Delete my gear"
+
+    You can also send feedback about the app — being nice is appreciated.
+  es: |
+    Hey! KiteToGo te permite:
+
+    🌎 Adjuntar una ubicación
+    🪁🪈🏄 Ofrecer tu equipo para alquilar en tu zona
+    🔍 Encontrar equipo en algun lugar del mundo
+    📋 Ver qué tienes listado
+    🔕 Borrar tu equipo
+
+    Ejemplos (texto o voz):
+    • "Quiero alquilar mi cometa Duotone Evo año 2022 de 11m"
+    • "Estoy buscando una tabla en Barcelona"
+    • "Quiero ver mi equipo"
+    • "Elimina mi equipo"
+
+    También puedes enviar feedback sobre la app — ser amable se aprecia.
+  fr: |
+    Salut ! KiteToGo vous permet de :
+
+    🌎 Joindre un lieu
+    🪁🪈🏄 Proposer votre matériel à la location dans votre région
+    🔍 Trouver du matériel partout dans le monde
+    📋 Voir ce que vous avez publié
+    🗑️ Supprimer votre matériel
+
+    Exemples (texte ou voix) :
+    • "Je veux louer mon kite Duotone Evo 12m de 2022"
+    • "Je cherche une planche à Barcelone"
+    • "Montre-moi mon matériel"
+    • "Supprime mon matériel"
+
+    Vous pouvez aussi envoyer un retour sur l'application — la gentillesse est appréciée.
+  it: |
+    Ciao! KiteToGo ti permette di:
+
+    🌎 Aggiungere una località
+    🪁🪈🏄 Offrire la tua attrezzatura in affitto nella tua zona
+    🔍 Trovare attrezzatura ovunque nel mondo
+    📋 Vedere cosa hai pubblicato
+    🗑️ Eliminare la tua attrezzatura
+
+    Esempi (testo o voce):
+    • "Voglio affittare il mio kite Duotone Evo 12m del 2022"
+    • "Cerco una tavola a Barcellona"
+    • "Mostrami la mia attrezzatura"
+    • "Elimina la mia attrezzatura"
+
+    Puoi anche inviare feedback sull'app — la gentilezza è apprezzata.
+  nl: |
+    Hey! KiteToGo laat je het volgende doen:
+
+    🌎 Een locatie toevoegen
+    🪁🪈🏄 Je uitrusting te huur aanbieden in jouw regio
+    🔍 Uitrusting overal ter wereld vinden
+    📋 Bekijken wat je hebt aangeboden
+    🗑️ Je uitrusting verwijderen
+
+    Voorbeelden (tekst of spraak):
+    • "Ik wil mijn kite Duotone Evo 12m uit 2022 verhuren"
+    • "Ik zoek een board in Barcelona"
+    • "Laat me mijn uitrusting zien"
+    • "Verwijder mijn uitrusting"
+
+    Je kunt ook feedback over de app sturen — vriendelijkheid wordt gewaardeerd.
+
+unsupported_message_type:
+  de: |
+    Im Moment kann ich nur Text-, Sprach- und Standortnachrichten verarbeiten.
+
+    Versuche, mir eine Nachricht zu senden wie:
+    • "Ich möchte mein North Atmos Board von 2022 (139x41) vermieten"
+    • "Suche einen Kite in Tarifa"
+    • "Zeig mir mein Equipment"
+
+    Du kannst auch eine Sprachnachricht senden, in der du beschreibst, was du brauchst, oder Feedback zu KiteToGo!
+  en: |
+    I can only process text, voice and location messages for now.
+
+    Try sending me a message like:
+    • "I want to rent out my North Atmos board made in 2022. It's size is 139x41"
+    • "Looking for a board in Miami"
+    • "Show me my gear"
+
+    Or send a voice message describing what you need!
+  es: |
+    Por ahora solo puedo procesar mensajes de texto, voz y recibir ubicaciones.
+
+    Intenta enviarme un mensaje como:
+    • "Quiero alquilar mi tabla North Atmos 2022 de 139x41"
+    • "Estoy buscando una cometa en Tarifa"
+    • "Muéstrame mi equipo"
+
+    También podrías enviar un mensaje texto o voz describiendo lo que necesitas... o feedback sobre KiteToGo!
+  fr: |
+    Pour le moment, je peux seulement traiter les messages texte, vocaux et les lieux.
+
+    Essayez de m'envoyer un message comme :
+    • "Je veux louer ma planche North Atmos 2022, taille 139x41"
+    • "Je cherche un kite à Tarifa"
+    • "Montre-moi mon matériel"
+
+    Vous pouvez aussi envoyer un message vocal décrivant ce dont vous avez besoin, ou un retour sur KiteToGo !
+  it: |
+    Per ora posso elaborare solo messaggi di testo, vocali e posizioni.
+
+    Prova a inviarmi un messaggio come:
+    • "Voglio affittare la mia tavola North Atmos 2022, misura 139x41"
+    • "Cerco un kite a Tarifa"
+    • "Mostrami la mia attrezzatura"
+
+    Puoi anche inviarmi un messaggio vocale descrivendo ciò di cui hai bisogno o dare feedback su KiteToGo!
+  nl: |
+    Op dit moment kan ik alleen tekst-, spraak- en locatieberichten verwerken.
+
+    Probeer mij bijvoorbeeld een bericht te sturen zoals:
+    • "Ik wil mijn North Atmos board uit 2022 van 139x41 verhuren"
+    • "Ik zoek een kite in Tarifa"
+    • "Laat me mijn uitrusting zien"
+
+    Je kunt ook een spraakbericht sturen waarin je uitlegt wat je nodig hebt, of feedback geven over KiteToGo!
+
+school_location_label:
+  en: "Kite school - __LOCATION__"
+  es: "Escuela de kite - __LOCATION__"
+  fr: "École de kite - __LOCATION__"
+  de: "Kiteschule - __LOCATION__"
+  it: "Scuola di kite - __LOCATION__"
+  nl: "Kiteschool - __LOCATION__"
+
+full_gear_rental_label:
+  en: "Full gear rental"
+  es: "Alquiler de equipo completo"
+  fr: "Location de matériel complet"
+  de: "Komplettausrüstung Verleih"
+  it: "Noleggio attrezzatura completa"
+  nl: "Volledige uitrusting verhuur"
+
+welcome_message:
+  de: |
+    Hallo! 🪂
+
+    KiteToGo verbindet Kitesurfer, die weltweit Kitematerial mieten möchten. Das kann ich für dich tun:
+
+    🌎 Einen Standort anhängen
+    🪁🪈🏄 Dein Equipment in deiner Gegend zur Miete anbieten
+    🔍 Ausrüstung überall auf der Welt finden
+    📋 Sehen, was du gelistet hast
+    🗑️ Dein Equipment löschen
+
+    Sag mir einfach, was du tun möchtest! Du kannst Text- oder Sprachnachrichten senden.
+  en: |
+    Hey there! 🪂
+
+    KiteToGo connects kitesurfers who want to rent kite gear around the world. Here's what I can do:
+
+    🌎 Attach a location
+    🪁🪈🏄 Offer your gear for rent in your area
+    🔍 Find gear anywhere in the world
+    📋 See what you have listed
+    🗑️ Delete your gear
+
+    Just tell me what you'd like to do! You can send text or voice messages.
+  es: |
+    Qué tal? 🪂
+
+    KiteToGo conecta kiters que busquen alquilar equipo de kite alrededor del mundo. Esto es lo que puedo hacer:
+
+    🌎 Adjuntar una ubicación
+    🪁🪈🏄 Ofrecer tu equipo para alquilar en tu zona
+    🔍 Encontrar equipo en algun lugar del mundo
+    📋 Ver qué tienes listado
+    🔕 Borrar tu equipo
+
+    Solo comentame qué te gustaría hacer! Por mensaje de texto o voz.
+  fr: |
+    Salut ! 🪂
+
+    KiteToGo relie les kitesurfeurs qui souhaitent louer du matériel partout dans le monde. Voici ce que je peux faire :
+
+    🌎 Joindre un lieu
+    🪁🪈🏄 Proposer votre matériel à la location dans votre zone
+    🔍 Trouver du matériel partout dans le monde
+    📋 Voir ce que vous avez listé
+    🗑️ Supprimer votre matériel
+
+    Dites-moi simplement ce que vous voulez faire ! Vous pouvez envoyer un message texte ou vocal.
+  it: |
+    Ciao! 🪂
+
+    KiteToGo mette in contatto kitesurfisti che vogliono noleggiare attrezzatura in tutto il mondo. Ecco cosa posso fare:
+
+    🌎 Aggiungere una località
+    🪁🪈🏄 Offrire la tua attrezzatura in affitto nella tua zona
+    🔍 Trovare attrezzatura ovunque nel mondo
+    📋 Vedere cosa hai pubblicato
+    🗑️ Eliminare la tua attrezzatura
+
+    Dimmi semplicemente cosa vuoi fare! Puoi inviare messaggi di testo o vocali.
+  nl: |
+    Hallo daar! 🪂
+
+    KiteToGo verbindt kitesurfers die overal ter wereld kitemateriaal willen huren. Dit kan ik doen:
+
+    🌎 Een locatie toevoegen
+    🪁🪈🏄 Je uitrusting te huur aanbieden in jouw regio
+    🔍 Uitrusting overal ter wereld vinden
+    📋 Bekijken wat je hebt aangeboden
+    🗑️ Je uitrusting verwijderen
+
+    Vertel me gewoon wat je wilt doen! Je kunt een tekst- of spraakbericht sturen.

@@ -1,0 +1,433 @@
+conjunction_and:
+  de: "und"
+  en: "and"
+  es: "y"
+  fr: "et"
+  it: "e"
+  nl: "en"
+
+edit_gear_action_expired:
+  de: "Diese Aktion ist nicht mehr verfügbar. Sag 'Ausrüstung bearbeiten' um neu zu starten."
+  en: "This action is no longer available. Say 'edit gear' to start again."
+  es: "Esta acción ya no está disponible. Di 'editar equipo' para comenzar de nuevo."
+
+edit_gear_delete_all_button:
+  de: "🗑 Alles löschen"
+  en: "🗑 Delete all"
+  es: "🗑 Borrar todo"
+  fr: "🗑 Tout supprimer"
+  it: "🗑 Elimina tutto"
+  nl: "🗑 Alles verwijderen"
+
+edit_gear_delete_button:
+  de: "Löschen"
+  en: "Delete"
+  es: "Borrar"
+
+edit_gear_enter_value:
+  de: "__FIELD__ aktuell: __CURRENT_VALUE__\nSchreibe den neuen Wert:"
+  en: "__FIELD__ currently: __CURRENT_VALUE__\nType the new value:"
+  es: "__FIELD__ actual: __CURRENT_VALUE__\nEscribí el nuevo valor:"
+
+edit_gear_active_deposit:
+  de: "⚠️ *__GEAR__* hat gerade eine aktive Kaution. Du kannst es erst bearbeiten oder löschen, wenn die Kaution abgeschlossen ist."
+  en: "⚠️ *__GEAR__* currently has an active security deposit. You can edit or delete it once the deposit is resolved."
+  es: "⚠️ *__GEAR__* tiene un depósito activo en este momento. Podés editarlo o borrarlo una vez que se resuelva el depósito."
+
+edit_gear_no_items:
+  de: "Du hast noch keine Ausrüstung gelistet. Verwende 'Ausrüstung anbieten' zum Hinzufügen."
+  en: "You don't have any gear listed. Use 'offer gear' to add some."
+  es: "No tenés equipo listado. Usá 'ofrecer equipo' para agregar."
+
+edit_gear_select_prompt:
+  de: "Welches Element möchtest du bearbeiten?"
+  en: "Which item would you like to edit?"
+  es: "¿Qué item querés editar?"
+
+edit_gear_show_list_button:
+  de: "Ausrüstung anzeigen"
+  en: "Show gear"
+  es: "Ver equipo"
+
+edit_gear_updated:
+  de: "✅ Aktualisiert: __GEAR__"
+  en: "✅ Updated: __GEAR__"
+  es: "✅ Actualizado: __GEAR__"
+
+edit_gear_which_field:
+  de: "__GEAR__\n\nWas möchtest du ändern?"
+  en: "__GEAR__\n\nWhat would you like to change?"
+  es: "__GEAR__\n\n¿Qué querés cambiar?"
+
+inventory_deleted:
+  de: "✅ Fertig, __COUNT__ Anzeige(n) gelöscht."
+  en: "✅ Done, deleted __COUNT__ listing(s)."
+  es: "✅ Listo, borré __COUNT__ publicación/es."
+  fr: "✅ Terminé, __COUNT__ annonce(s) supprimée(s)."
+  it: "✅ Fatto, __COUNT__ annuncio/i eliminato/i."
+  nl: "✅ Klaar, __COUNT__ advertentie(s) verwijderd."
+
+gear_complement_suggestion:
+  de: |
+    💡 Tipp: Rider suchen oft ein komplettes Setup. Du könntest auch __MISSING_GEAR_TYPES__ listen, um mehr Mieter zu erreichen!
+  en: |
+    💡 Tip: Riders often look for a complete setup. You could also list your __MISSING_GEAR_TYPES__ to attract more renters!
+  es: |
+    💡 Tip: Los riders suelen buscar un equipo completo. También podrías publicar tu __MISSING_GEAR_TYPES__ para atraer más interesados!
+  fr: |
+    💡 Conseil : Les riders recherchent souvent un setup complet. Vous pourriez aussi lister votre __MISSING_GEAR_TYPES__ pour attirer plus de locataires !
+  it: |
+    💡 Consiglio: I rider spesso cercano un setup completo. Potresti anche elencare il tuo __MISSING_GEAR_TYPES__ per attirare più noleggiatori!
+  nl: |
+    💡 Tip: Riders zoeken vaak een complete setup. Je kunt ook je __MISSING_GEAR_TYPES__ vermelden om meer huurders aan te trekken!
+
+gear_all_completed:
+  de: "All deine Ausrüstung wurde erfolgreich gespeichert."
+  en: "All your gear has been saved successfully."
+  es: "Todos tus equipos fueron guardados exitosamente."
+  fr: "Tout votre matériel a été sauvegardé avec succès."
+  it: "Tutta la tua attrezzatura è stata salvata con successo."
+  nl: "Al je uitrusting is succesvol opgeslagen."
+
+gear_auto_saved:
+  de: "Ich habe auch __COUNT__ ähnliche(n) Artikel mit denselben Infos gespeichert."
+  en: "I also saved __COUNT__ similar item(s) with the same info."
+  es: "También guardé __COUNT__ item(s) similares con la misma info."
+  fr: "J'ai aussi enregistré __COUNT__ article(s) similaire(s) avec les mêmes infos."
+  it: "Ho anche salvato __COUNT__ articolo/i simile/i con le stesse info."
+  nl: "Ik heb ook __COUNT__ vergelijkbaar(e) item(s) met dezelfde info opgeslagen."
+
+gear_field_brand_label:
+  de: "Marke"
+  en: "Brand"
+  es: "Marca"
+  fr: "Marque"
+  it: "Marca"
+  nl: "Merk"
+
+gear_field_confirm:
+  de: "Könntest du die Details deines __GEAR_TYPE__ bestätigen?"
+  en: "Could you confirm the details of your __GEAR_TYPE__?"
+  es: "¿Podrías confirmar los datos de tu __GEAR_TYPE__?"
+  fr: "Pourriez-vous confirmer les détails de votre __GEAR_TYPE__ ?"
+  it: "Potresti confermare i dettagli del tuo __GEAR_TYPE__?"
+  nl: "Kun je de details van je __GEAR_TYPE__ bevestigen?"
+
+gear_field_extraction_error:
+  de: "Ich habe das nicht ganz verstanden. Kannst du mir Marke, Modell, Größe und Jahr sagen?"
+  en: "I didn't quite understand. Could you tell me the brand, model, size and year?"
+  es: "No entendí bien. ¿Puedes decirme la marca, modelo, tamaño y año?"
+  fr: "Je n'ai pas bien compris. Pourriez-vous me dire la marque, le modèle, la taille et l'année ?"
+  it: "Non ho capito bene. Puoi dirmi marca, modello, taglia e anno?"
+  nl: "Ik begreep het niet helemaal. Kun je me het merk, model, maat en jaar vertellen?"
+
+gear_field_gender_label:
+  de: "Geschlecht"
+  en: "Gender"
+  es: "Género"
+  fr: "Genre"
+  it: "Genere"
+  nl: "Geslacht"
+
+gear_field_known_prefix:
+  de: "Ich habe bereits:"
+  en: "I already have:"
+  es: "Ya tengo:"
+  fr: "J'ai déjà :"
+  it: "Ho già:"
+  nl: "Ik heb al:"
+
+gear_field_model_label:
+  de: "Modell"
+  en: "Model"
+  es: "Modelo"
+  fr: "Modèle"
+  it: "Modello"
+  nl: "Model"
+
+gear_field_question_brand:
+  de: "Was ist die Marke deines __GEAR_TYPE__?"
+  en: "What is the brand of your __GEAR_TYPE__?"
+  es: "¿Cuál es la marca de tu __GEAR_TYPE__?"
+  fr: "Quelle est la marque de votre __GEAR_TYPE__ ?"
+  it: "Qual è la marca del tuo __GEAR_TYPE__?"
+  nl: "Wat is het merk van je __GEAR_TYPE__?"
+
+gear_field_question_gender:
+  de: "Ist dein __GEAR_TYPE__ männlich (M) oder weiblich (F)?"
+  en: "Is your __GEAR_TYPE__ for male (M) or female (F)?"
+  es: "¿Tu __GEAR_TYPE__ es masculino (M) o femenino (F)?"
+  fr: "Votre __GEAR_TYPE__ est-il masculin (M) ou féminin (F) ?"
+  it: "Il tuo __GEAR_TYPE__ è maschile (M) o femminile (F)?"
+  nl: "Is je __GEAR_TYPE__ voor mannen (M) of vrouwen (F)?"
+
+gear_field_question_model:
+  de: "Was ist das Modell deines __GEAR_TYPE__?"
+  en: "What is the model of your __GEAR_TYPE__?"
+  es: "¿Cuál es el modelo de tu __GEAR_TYPE__?"
+  fr: "Quel est le modèle de votre __GEAR_TYPE__ ?"
+  it: "Qual è il modello del tuo __GEAR_TYPE__?"
+  nl: "Wat is het model van je __GEAR_TYPE__?"
+
+gear_field_question_multiple:
+  de: "Was sind __FIELDS__ deines __GEAR_TYPE__?"
+  en: "What are the __FIELDS__ of your __GEAR_TYPE__?"
+  es: "¿Cuáles son __FIELDS__ de tu __GEAR_TYPE__?"
+  fr: "Quels sont __FIELDS__ de votre __GEAR_TYPE__ ?"
+  it: "Quali sono __FIELDS__ del tuo __GEAR_TYPE__?"
+  nl: "Wat zijn __FIELDS__ van je __GEAR_TYPE__?"
+
+gear_field_question_size:
+  de: "Was ist die Größe deines __GEAR_TYPE__?"
+  en: "What is the size of your __GEAR_TYPE__?"
+  es: "¿Cuál es el tamaño de tu __GEAR_TYPE__?"
+  fr: "Quelle est la taille de votre __GEAR_TYPE__ ?"
+  it: "Qual è la taglia del tuo __GEAR_TYPE__?"
+  nl: "Wat is de maat van je __GEAR_TYPE__?"
+
+gear_field_question_year:
+  de: "Was ist das Jahr deines __GEAR_TYPE__?"
+  en: "What is the year of your __GEAR_TYPE__?"
+  es: "¿Cuál es el año de tu __GEAR_TYPE__?"
+  fr: "Quelle est l'année de votre __GEAR_TYPE__ ?"
+  it: "Qual è l'anno del tuo __GEAR_TYPE__?"
+  nl: "Wat is het jaar van je __GEAR_TYPE__?"
+
+gear_field_size_label:
+  de: "Größe"
+  en: "Size"
+  es: "Tamaño"
+  fr: "Taille"
+  it: "Taglia"
+  nl: "Maat"
+
+gear_field_year_label:
+  de: "Jahr"
+  en: "Year"
+  es: "Año"
+  fr: "Année"
+  it: "Anno"
+  nl: "Jaar"
+
+gear_item_saved_more_pending:
+  de: "✅ __BRAND__ __TYPE__ gespeichert. Noch __REMAINING__ zu vervollständigen."
+  en: "✅ __BRAND__ __TYPE__ saved. __REMAINING__ more to complete."
+  es: "✅ __BRAND__ __TYPE__ guardado. Quedan __REMAINING__ más por completar."
+  fr: "✅ __BRAND__ __TYPE__ sauvegardé. __REMAINING__ restants à compléter."
+  it: "✅ __BRAND__ __TYPE__ salvato. Ancora __REMAINING__ da completare."
+  nl: "✅ __BRAND__ __TYPE__ opgeslagen. Nog __REMAINING__ te voltooien."
+
+gear_multiple_items_intro:
+  de: "Ich brauche zusätzliche Details für __COUNT__ Artikel. Beginnen wir mit dem ersten:"
+  en: "I need additional details for __COUNT__ items. Let's start with the first one:"
+  es: "Necesito datos adicionales de __COUNT__ items. Empecemos con el primero:"
+  fr: "J'ai besoin de détails supplémentaires pour __COUNT__ articles. Commençons par le premier :"
+  it: "Ho bisogno di dettagli aggiuntivi per __COUNT__ articoli. Iniziamo con il primo:"
+  nl: "Ik heb extra details nodig voor __COUNT__ items. Laten we beginnen met de eerste:"
+
+gear_next_item_intro:
+  de: "Gespeichert! Jetzt der nächste:"
+  en: "Saved! Now the next one:"
+  es: "¡Guardado! Ahora el siguiente:"
+  fr: "Enregistré ! Maintenant le suivant :"
+  it: "Salvato! Ora il prossimo:"
+  nl: "Opgeslagen! Nu de volgende:"
+
+gear_offer_flow_completed:
+  de: "✅ Dein __BRAND__ __TYPE__ wurde erfolgreich gespeichert!"
+  en: "✅ Your __BRAND__ __TYPE__ has been saved successfully!"
+  es: "✅ Tu __BRAND__ __TYPE__ ha sido guardado exitosamente!"
+  fr: "✅ Votre __BRAND__ __TYPE__ a été sauvegardé avec succès !"
+  it: "✅ Il tuo __BRAND__ __TYPE__ è stato salvato con successo!"
+  nl: "✅ Je __BRAND__ __TYPE__ is succesvol opgeslagen!"
+
+full_gear_registered:
+  de: "Perfekt! Du bist jetzt als Anbieter von komplettem Kitesurf-Equipment registriert. Wenn jemand in __LOCATION_NAME__ sucht, werden sie dich finden."
+  en: "You're now registered as a full kitesurf gear provider. When someone searches in __LOCATION_NAME__, they'll find you."
+  es: "Quedaste registrado como proveedor de equipo de kite completo. Cuando alguien busque en __LOCATION_NAME__, te van a encontrar."
+  fr: "Vous êtes maintenant enregistré en tant que fournisseur d'équipement de kitesurf complet. Quand quelqu'un cherche à __LOCATION_NAME__, il vous trouvera."
+  it: "Sei ora registrato come fornitore di attrezzatura kitesurf completa. Quando qualcuno cerca a __LOCATION_NAME__, ti troverà."
+  nl: "Je bent nu geregistreerd als aanbieder van complete kitesurf-uitrusting. Als iemand zoekt in __LOCATION_NAME__, vinden ze je."
+
+gear_offer_missing_location:
+  de: "Wo bietest du das an? (der Mieter sucht nach einem bestimmten Standort)"
+  en: "Where are you offering this? (renter will search in a particular location)"
+  es: "¿Dónde estás ofreciendo esto? (el arrendatario buscará en una ubicación particular)"
+  fr: "Où proposez-vous cela ? (le locataire cherchera dans un emplacement particulier)"
+  it: "Dove stai offrendo questo? (il noleggiatore cercherà in un luogo specifico)"
+  nl: "Waar bied je dit aan? (de huurder zoekt op een bepaalde locatie)"
+
+gear_offer_missing_required_fields:
+  de: "Um Ihr __GEAR_TYPE__ anzubieten, geben Sie bitte alle erforderlichen Felder an: Marke, Modell, Größe und Jahr."
+  en: "To offer your __GEAR_TYPE__, please provide all these required fields: brand, model, size, and year."
+  es: "Para ofrecer tu __GEAR_TYPE__, por favor proporciona todos estos campos obligatorios: marca, modelo, tamaño y año."
+  fr: "Pour offrir votre __GEAR_TYPE__, veuillez fournir tous ces champs obligatoires : marque, modèle, taille et année."
+  it: "Per offrire il tuo __GEAR_TYPE__, fornisci tutti i campi obbligatori: marca, modello, taglia e anno."
+  nl: "Om je __GEAR_TYPE__ aan te bieden, geef alle vereiste velden op: merk, model, maat en jaar."
+
+gear_offer_success:
+  de: |
+    Super!
+    Dein Kitesurf-Material wird nun angezeigt, wenn jemand in __LOCATION_NAME__ sucht.
+  en: |
+    Awesome!
+    Your kite gear will now appear listed when somebody searches in __LOCATION_NAME__.
+  es: |
+    ¡Genial!
+    Tu equipo de kitesurf ahora aparecerá listado cuando alguien busque en __LOCATION_NAME__.
+  fr: |
+    Génial !
+    Votre matériel de kitesurf apparaîtra désormais dans les résultats lorsqu'une personne cherchera à __LOCATION_NAME__.
+  it: |
+    Fantastico!
+    La tua attrezzatura da kitesurf apparirà ora quando qualcuno cercherà in __LOCATION_NAME__.
+  nl: |
+    Geweldig!
+    Je kitesurfuitrusting wordt nu weergegeven wanneer iemand zoekt in __LOCATION_NAME__.
+
+gear_request_closest_location:
+  de: "Der nächste Ort mit verfügbarer Mietausrüstung ist in __CLOSEST_LOCATION_NAME__, etwa __DISTANCE__ km entfernt."
+  en: "The closest place with available rental gear is in __CLOSEST_LOCATION_NAME__, about __DISTANCE__ km away."
+  es: "El lugar mas cercano con disponibilidad de alquiler es en __CLOSEST_LOCATION_NAME__, a unos __DISTANCE__ kms."
+  fr: "Le lieu le plus proche avec du matériel de location disponible est à __CLOSEST_LOCATION_NAME__, à environ __DISTANCE__ km."
+  it: "Il luogo più vicino con attrezzatura a noleggio disponibile è a __CLOSEST_LOCATION_NAME__, a circa __DISTANCE__ km di distanza."
+  nl: "De dichtstbijzijnde plaats met beschikbare verhuuruitrusting is in __CLOSEST_LOCATION_NAME__, ongeveer __DISTANCE__ km verderop."
+
+gear_request_missing_location:
+  de: "Bitte gib einen Ort an oder füge ihn hinzu, um nach verfügbarer Ausrüstung zu suchen."
+  en: "Please specify or attach a location to search for available gear."
+  es: "Por favor especifica a dónde o adjunta una ubicación para buscar disponibilidad."
+  fr: "Veuillez préciser ou joindre un lieu pour rechercher du matériel disponible."
+  it: "Specifica o allega una posizione per cercare attrezzatura disponibile."
+  nl: "Specificeer of voeg een locatie toe om naar beschikbare uitrusting te zoeken."
+
+gear_request_no_results:
+  de: |
+    Ich konnte an diesem Ort (__LOCATION_NAME__) keine verfügbare Ausrüstung finden.
+    __CLOSEST_LOCATION_INFO__
+  en: |
+    I couldn't find any available gear in that location (__LOCATION_NAME__).
+    __CLOSEST_LOCATION_INFO__
+  es: |
+    No pude encontrar nada disponible en esa ubicación (__LOCATION_NAME__).
+    __CLOSEST_LOCATION_INFO__
+  fr: |
+    Je n'ai trouvé aucun équipement disponible à cet endroit (__LOCATION_NAME__).
+    __CLOSEST_LOCATION_INFO__
+  it: |
+    Non ho trovato attrezzatura disponibile in questa località (__LOCATION_NAME__).
+    __CLOSEST_LOCATION_INFO__
+  nl: |
+    Ik kon geen beschikbare uitrusting vinden op deze locatie (__LOCATION_NAME__).
+    __CLOSEST_LOCATION_INFO__
+
+gear_save_error:
+  de: "Beim Speichern ist ein Fehler aufgetreten. Kannst du es noch einmal versuchen?"
+  en: "There was an error saving the gear. Can you try again?"
+  es: "Hubo un error al guardar el equipo. ¿Puedes intentar de nuevo?"
+  fr: "Une erreur s'est produite lors de l'enregistrement. Pouvez-vous réessayer ?"
+  it: "Si è verificato un errore durante il salvataggio. Puoi riprovare?"
+  nl: "Er is een fout opgetreden bij het opslaan. Kun je het opnieuw proberen?"
+
+gear_stored_partial:
+  de: "Ich habe dein __GEAR__ gespeichert."
+  en: "I saved your __GEAR__."
+  es: "Guardé tu __GEAR__."
+  fr: "J'ai sauvegardé votre __GEAR__."
+  it: "Ho salvato il tuo __GEAR__."
+  nl: "Ik heb je __GEAR__ opgeslagen."
+
+gear_type_default:
+  de: "Ausrüstung"
+  en: "gear"
+  es: "equipo"
+  fr: "équipement"
+  it: "attrezzatura"
+  nl: "uitrusting"
+
+list_own_inventory_empty:
+  de: |
+    Du hast noch keine Ausrüstung gelistet.
+    Verwende 'Ausrüstung anbieten', um sie hinzuzufügen!
+  en: |
+    You don't have any gear listed yet.
+    Use 'offer gear' to add it!
+  es: |
+    Aún no publicaste equipo.
+    Usa 'ofrecer equipo' para agregarlo!
+  fr: |
+    Vous n'avez encore aucun matériel listé.
+    Utilisez 'proposer du matériel' pour en ajouter !
+  it: |
+    Non hai ancora elencato attrezzatura.
+    Usa 'offrire attrezzatura' per aggiungerla!
+  nl: |
+    Je hebt nog geen uitrusting toegevoegd.
+    Gebruik 'uitrusting aanbieden' om deze toe te voegen!
+
+list_own_inventory_success:
+  de: |
+    Dies ist dein Ausrüstungsbestand__LOCATION_SUFFIX__:
+
+    __GEAR_LIST__
+  en: |
+    This is your gear inventory__LOCATION_SUFFIX__:
+
+    __GEAR_LIST__
+  es: |
+    Este es tu inventario de equipo__LOCATION_SUFFIX__:
+
+    __GEAR_LIST__
+  fr: |
+    Voici votre inventaire de matériel__LOCATION_SUFFIX__ :
+
+    __GEAR_LIST__
+  it: |
+    Questo è il tuo inventario di attrezzatura__LOCATION_SUFFIX__:
+
+    __GEAR_LIST__
+  nl: |
+    Dit is je uitrustingsvoorraad__LOCATION_SUFFIX__:
+
+    __GEAR_LIST__
+
+newly_listed_gear_label:
+  de: "Deine neu gelistete Ausrüstung:"
+  en: "Your newly listed gear:"
+  es: "Tu equipo recién listado:"
+  fr: "Votre matériel nouvellement listé :"
+  it: "La tua attrezzatura appena elencata:"
+  nl: "Je nieuw vermelde uitrusting:"
+  pt: "Seu equipamento recém-listado:"
+
+no_gear_extracted:
+  de: |
+    Ich konnte nicht verstehen, welche Ausrüstung Sie anbieten möchten.
+    Bitte geben Sie Details wie: Typ (Kite/Board/etc), Marke, Modell, Größe und Jahr an.
+
+    Zum Beispiel: "Ich möchte meinen Duotone Evo 12m von 2022 vermieten"
+  en: |
+    I couldn't understand which gear you want to offer.
+    Please provide details like: type (kite/board/etc), brand, model, size, and year.
+
+    For example: "I want to rent my Duotone Evo 12m from 2022"
+  es: |
+    No pude entender qué equipo quieres ofrecer.
+    Por favor proporciona detalles como: tipo (kite/tabla/etc), marca, modelo, tamaño y año.
+
+    Por ejemplo: "Quiero alquilar mi Duotone Evo 12m del 2022"
+  fr: |
+    Je n'ai pas pu comprendre quel matériel vous souhaitez offrir.
+    Veuillez fournir des détails tels que : type (kite/planche/etc), marque, modèle, taille et année.
+
+    Par exemple : "Je veux louer mon Duotone Evo 12m de 2022"
+  it: |
+    Non sono riuscito a capire quale attrezzatura vuoi offrire.
+    Fornisci dettagli come: tipo (kite/tavola/etc), marca, modello, taglia e anno.
+
+    Ad esempio: "Voglio affittare il mio Duotone Evo 12m del 2022"
+  nl: |
+    Ik kon niet begrijpen welke uitrusting je wilt aanbieden.
+    Geef details zoals: type (kite/board/etc), merk, model, maat en jaar.
+
+    Bijvoorbeeld: "Ik wil mijn Duotone Evo 12m uit 2022 verhuren"

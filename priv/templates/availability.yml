@@ -1,0 +1,47 @@
+availability_countries_header:
+  de: "Ausrüstung ist verfügbar in:"
+  en: "Gear is available in:"
+  es: "Hay equipo disponible en:"
+  fr: "Du matériel est disponible en :"
+  it: "L'attrezzatura è disponibile in:"
+  nl: "Uitrusting is beschikbaar in:"
+
+availability_location_plural:
+  de: "Standorte"
+  en: "locations"
+  es: "ubicaciones"
+  fr: "lieux"
+  it: "località"
+  nl: "locaties"
+
+availability_location_singular:
+  de: "Standort"
+  en: "location"
+  es: "ubicación"
+  fr: "lieu"
+  it: "località"
+  nl: "locatie"
+
+availability_locations_header:
+  de: "In __COUNTRY__ gibt es Ausrüstung in:"
+  en: "In __COUNTRY__ there is gear available in:"
+  es: "En __COUNTRY__ hay equipo disponible en:"
+  fr: "En __COUNTRY__, du matériel est disponible à :"
+  it: "In __COUNTRY__ l'attrezzatura è disponibile a:"
+  nl: "In __COUNTRY__ is er uitrusting beschikbaar in:"
+
+availability_no_gear:
+  de: "Derzeit ist keine Ausrüstung zum Mieten verfügbar."
+  en: "There is currently no gear available for rent."
+  es: "Actualmente no hay equipo disponible para alquilar."
+  fr: "Il n'y a actuellement aucun équipement disponible à la location."
+  it: "Al momento non c'è attrezzatura disponibile per il noleggio."
+  nl: "Er is momenteel geen uitrusting beschikbaar om te huren."
+
+availability_no_gear_in_country:
+  de: "Derzeit ist keine Ausrüstung in __COUNTRY__ verfügbar."
+  en: "There is currently no gear available in __COUNTRY__."
+  es: "Actualmente no hay equipo disponible en __COUNTRY__."
+  fr: "Il n'y a actuellement aucun équipement disponible en __COUNTRY__."
+  it: "Al momento non c'è attrezzatura disponibile in __COUNTRY__."
+  nl: "Er is momenteel geen uitrusting beschikbaar in __COUNTRY__."

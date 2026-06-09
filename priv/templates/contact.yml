@@ -1,0 +1,119 @@
+# WhatsApp CTA limits: button ≤ 20 bytes, header ≤ 60 chars, footer ≤ 60 chars, body ≤ 1024 chars
+# Note: € = 3 bytes, — (em dash) = 3 bytes in UTF-8
+contact_payment_button:
+  de: "Kontakt __PRICE__"
+  en: "Get Contact __PRICE__"
+  es: "Contacto __PRICE__"
+  fr: "Contact __PRICE__"
+  it: "Contatto __PRICE__"
+  nl: "Contact __PRICE__"
+
+contact_payment_failed:
+  de: "Zahlung fehlgeschlagen. Bitte versuche es erneut oder sende Feedback dazu."
+  en: "Payment failed. Please either try again or send feedback regarding this."
+  es: "El pago falló. Por favor intenta de nuevo o envía feedback sobre esto."
+  fr: "Le paiement a échoué. Veuillez réessayer ou envoyer un retour à ce sujet."
+  it: "Pagamento non riuscito. Riprova oppure invia un feedback a riguardo."
+  nl: "Betaling mislukt. Probeer het opnieuw of stuur feedback hierover."
+
+contact_payment_footer:
+  de: "Sichere Zahlung über Stripe"
+  en: "Secure payment via Stripe"
+  es: "Pago seguro vía Stripe"
+  fr: "Paiement sécurisé via Stripe"
+  it: "Pagamento sicuro tramite Stripe"
+  nl: "Veilige betaling via Stripe"
+
+contact_payment_header:
+  de: "Direkt den Besitzer erreichen"
+  en: "Get in Touch Directly"
+  es: "Contacta Directo al Dueño"
+  fr: "Contactez le Propriétaire"
+  it: "Contatta il Proprietario"
+  nl: "Neem Direct Contact Op"
+
+contact_payment_required:
+  de: "Für nur __PRICE__ erhältst du den WhatsApp-Kontakt des Besitzers und kannst sofort Preis, Verfügbarkeit und Abholung klären. Wenn ihr euch nicht einig werdet, schreib uns — wir finden eine Lösung."
+  en: "For just __PRICE__, get the owner's WhatsApp and arrange price, availability, and pickup directly. If you can't reach a deal with any owner, message us — we'll make it right."
+  es: "Por solo __PRICE__, obtén el WhatsApp del dueño y arregla precio, disponibilidad y recogida directamente. Si no llegas a un acuerdo con ningún dueño, escríbenos — lo solucionamos."
+  fr: "Pour seulement __PRICE__, obtenez le WhatsApp du propriétaire et arrangez prix, disponibilité et récupération directement. Si vous ne trouvez pas d'accord, écrivez-nous — on trouve une solution."
+  it: "Per soli __PRICE__, ottieni il WhatsApp del proprietario e organizza prezzo, disponibilità e ritiro direttamente. Se non riesci a trovare un accordo, scrivici — troviamo una soluzione."
+  nl: "Voor slechts __PRICE__ krijg je het WhatsApp-contact van de eigenaar en regel je prijs, beschikbaarheid en ophalen rechtstreeks. Als je geen deal bereikt, stuur ons een bericht — we lossen het op."
+
+contact_selection_instruction:
+  de: "Antworten Sie mit der Nummer (z.B. 1) des Eigentümers, den Sie kontaktieren möchten."
+  en: "Reply with the number (e.g., 1) of the owner you'd like to contact."
+  es: "Responde con el número (por ejemplo, 1) del propietario al que deseas contactar."
+  fr: "Répondez avec le numéro (par exemple, 1) du propriétaire que vous souhaitez contacter."
+  it: "Rispondi con il numero (es. 1) del proprietario che vorresti contattare."
+  nl: "Reageer met het nummer (bijv. 1) van de eigenaar die je wilt contacteren."
+
+contact_selection_invalid:
+  de: "Bitte antworten Sie mit einer gültigen Nummer aus der Liste (z.B. 1)."
+  en: "Please reply with a valid number from the list (e.g., 1)."
+  es: "Por favor, responde con un número válido de la lista (por ejemplo, 1)."
+  fr: "Veuillez répondre avec un numéro valide de la liste (par exemple, 1)."
+  it: "Rispondi con un numero valido dalla lista (es. 1)."
+  nl: "Reageer met een geldig nummer uit de lijst (bijv. 1)."
+
+contact_sharing_consent_confirmed:
+  de: "Danke für die Bestätigung! Deine Ausrüstung ist jetzt für andere Benutzer sichtbar."
+  en: "Thanks for confirming! Your gear is now visible to other users."
+  es: "¡Gracias por confirmar! Tu equipo ahora es visible para otros usuarios."
+  fr: "Merci d'avoir confirmé ! Votre matériel est maintenant visible pour les autres utilisateurs."
+  it: "Grazie per aver confermato! La tua attrezzatura è ora visibile agli altri utenti."
+  nl: "Bedankt voor de bevestiging! Je uitrusting is nu zichtbaar voor andere gebruikers."
+
+contact_sharing_consent_request:
+  de: |
+    Deine Ausrüstung wurde gespeichert!
+
+    WICHTIG: Wenn jemand von dir mieten möchte, teilen wir deinen WhatsApp-Kontakt mit ihm (nachdem er eine Gebühr gezahlt hat, um Spam zu verhindern).
+
+    ⚠️ Reagiere mit 👍, um zu bestätigen, dass du dem Teilen deines Kontakts zustimmst; andernfalls wird deine Ausrüstung nicht gelistet.
+  en: |
+    Your gear has been saved!
+
+    IMPORTANT: When someone wants to rent from you, we'll share your WhatsApp contact with them (after they pay a fee to prevent spam).
+
+    ⚠️ React with a 👍 to confirm you agree to share your contact; otherwise your gear will not appear listed.
+  es: |
+    ¡Tu equipo ha sido guardado!
+
+    IMPORTANTE: Cuando alguien quiera alquilarte, compartiremos tu contacto de WhatsApp con ellos (después de que paguen una tarifa para evitar spam).
+
+    ⚠️ Reacciona con un 👍 para confirmar que aceptas compartir tu contacto; de lo contrario, tu equipo no aparecerá listado.
+  fr: |
+    Votre matériel a été enregistré !
+
+    IMPORTANT: Lorsque quelqu'un voudra louer chez vous, nous partagerons votre contact WhatsApp avec lui (après paiement de frais pour éviter le spam).
+
+    ⚠️ Réagissez avec un 👍 pour confirmer que vous acceptez de partager votre contact ; sinon, votre matériel ne sera pas listé.
+  it: |
+    La tua attrezzatura è stata salvata!
+
+    IMPORTANTE: Quando qualcuno vorrà noleggiare da te, condivideremo il tuo contatto WhatsApp con loro (dopo che avranno pagato una quota per prevenire lo spam).
+
+    ⚠️ Reagisci con un 👍 per confermare che accetti di condividere il tuo contatto; altrimenti la tua attrezzatura non verrà elencata.
+  nl: |
+    Je uitrusting is opgeslagen!
+
+    BELANGRIJK: Wanneer iemand bij jou wil huren, delen we je WhatsApp-contact met hen (nadat ze een vergoeding hebben betaald om spam te voorkomen).
+
+    ⚠️ Reageer met een 👍 om te bevestigen dat je akkoord gaat met het delen van je contact; anders verschijnt je uitrusting niet in de lijst.
+
+payment_confirmation_general:
+  de: "✅ Zahlung bestätigt! Sie haben jetzt Zugriff, um Ausrüstungsbesitzer zu kontaktieren. Senden Sie uns eine weitere Ausrüstungsanfrage, um zu beginnen!"
+  en: "✅ Payment confirmed! You now have access to contact gear owners. Send us another gear request to get started!"
+  es: "✅ Pago confirmado! Ahora tienes acceso para contactar a los propietarios de equipo. Envíanos otra solicitud de equipo para comenzar!"
+  fr: "✅ Paiement confirmé ! Vous avez maintenant accès pour contacter les propriétaires de matériel. Envoyez-nous une autre demande de matériel pour commencer !"
+  it: "✅ Pagamento confermato! Ora hai accesso per contattare i proprietari di attrezzatura. Inviaci un'altra richiesta di attrezzatura per iniziare!"
+  nl: "✅ Betaling bevestigd! Je hebt nu toegang om eigenaren van uitrusting te contacteren. Stuur ons een ander verzoek voor uitrusting om te beginnen!"
+
+test_mode_payment_notice:
+  de: "(Das System befindet sich derzeit im Testmodus, und Zahlungen funktionieren nur mit der Kartennummer 4242 4242 4242 4242)"
+  en: "(The system is currently in test mode, and payments only work with card number 4242 4242 4242 4242)"
+  es: "(El sistema está actualmente en modo de prueba, y los pagos funcionan solamente con la tarjeta número 4242 4242 4242 4242)"
+  fr: "(Le système est actuellement en mode test, et les paiements fonctionnent uniquement avec le numéro de carte 4242 4242 4242 4242)"
+  it: "(Il sistema è attualmente in modalità test e i pagamenti funzionano solo con il numero di carta 4242 4242 4242 4242)"
+  nl: "(Het systeem bevindt zich momenteel in testmodus, en betalingen werken alleen met kaartnummer 4242 4242 4242 4242)"

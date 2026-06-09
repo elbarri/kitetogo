@@ -1,0 +1,221 @@
+agreement_approved_owner_notification:
+  de: |
+    ✅ __RENTER_NAME__ hat den Mietvertrag akzeptiert!
+
+    Wir haben ihm den Zahlungslink für die Kaution von __AMOUNT__ gesendet. Sie werden benachrichtigt, sobald die Autorisierung abgeschlossen ist.
+  en: |
+    ✅ __RENTER_NAME__ accepted the rental agreement!
+
+    We've sent them the payment link for the security deposit of __AMOUNT__. You'll be notified once they complete the authorization.
+  es: |
+    ✅ __RENTER_NAME__ aceptó el acuerdo de alquiler!
+
+    Le hemos enviado el link de pago para el depósito de garantía de __AMOUNT__. Te notificaremos cuando complete la autorización.
+  fr: |
+    ✅ __RENTER_NAME__ a accepté le contrat de location !
+
+    Nous lui avons envoyé le lien de paiement pour le dépôt de garantie de __AMOUNT__. Vous serez notifié une fois l'autorisation terminée.
+  it: |
+    ✅ __RENTER_NAME__ ha accettato il contratto di noleggio!
+
+    Gli abbiamo inviato il link di pagamento per il deposito cauzionale di __AMOUNT__. Sarai notificato una volta completata l'autorizzazione.
+  nl: |
+    ✅ __RENTER_NAME__ heeft de huurovereenkomst geaccepteerd!
+
+    We hebben hen de betaallink voor de borgsom van __AMOUNT__ gestuurd. Je wordt op de hoogte gesteld zodra ze de autorisatie hebben voltooid.
+
+agreement_ready_for_renter:
+  de: |
+    __OWNER_NAME__ hat Ihnen einen Mietvertrag zur Überprüfung geschickt.
+
+    Artikel (__ITEMS_COUNT__):
+    __ITEMS_TEXT__
+
+    Gesamtkaution: __AMOUNT__
+    Dauer: __DURATION_HOURS__ Stunde(n)
+
+    Bitte überprüfen Sie den Vertrag und akzeptieren Sie, wenn Sie einverstanden sind.
+  en: |
+    __OWNER_NAME__ has sent you a rental agreement to review.
+
+    Items (__ITEMS_COUNT__):
+    __ITEMS_TEXT__
+
+    Total deposit: __AMOUNT__
+    Duration: __DURATION_HOURS__ hour(s)
+
+    Please review the agreement and accept if you agree to the terms.
+  es: |
+    __OWNER_NAME__ te ha enviado un acuerdo de alquiler para revisar.
+
+    Items (__ITEMS_COUNT__):
+    __ITEMS_TEXT__
+
+    Depósito total: __AMOUNT__
+    Duración: __DURATION_HOURS__ hora(s)
+
+    Por favor revisa el acuerdo y acepta si estás de acuerdo con los términos.
+  fr: |
+    __OWNER_NAME__ vous a envoyé un contrat de location à réviser.
+
+    Articles (__ITEMS_COUNT__):
+    __ITEMS_TEXT__
+
+    Dépôt total: __AMOUNT__
+    Durée: __DURATION_HOURS__ heure(s)
+
+    Veuillez examiner le contrat et accepter si vous êtes d'accord.
+  it: |
+    __OWNER_NAME__ ti ha inviato un contratto di noleggio da rivedere.
+
+    Articoli (__ITEMS_COUNT__):
+    __ITEMS_TEXT__
+
+    Deposito totale: __AMOUNT__
+    Durata: __DURATION_HOURS__ ora/e
+
+    Per favore rivedi il contratto e accetta se sei d'accordo.
+  nl: |
+    __OWNER_NAME__ heeft u een huurovereenkomst gestuurd om te bekijken.
+
+    Items (__ITEMS_COUNT__):
+    __ITEMS_TEXT__
+
+    Totale borg: __AMOUNT__
+    Duur: __DURATION_HOURS__ uur
+
+    Bekijk de overeenkomst en accepteer als u akkoord gaat.
+
+agreement_ready_header:
+  de: "Mietvertrag"
+  en: "Rental Agreement"
+  es: "Acuerdo de Alquiler"
+  fr: "Contrat de Location"
+  it: "Contratto Noleggio"
+  nl: "Huurovereenkomst"
+
+agreement_review_prompt:
+  de: |
+    Ihr Mietvertrag ist zur Überprüfung bereit!
+
+    Mieter: __RENTER_NAME__
+    Kaution: __AMOUNT__
+    Dauer: __DURATION_HOURS__ Stunde(n)
+
+    Sie können Dauer, Namen, Werte und Fotos bearbeiten. Klicken Sie auf "An Mieter senden", wenn Sie fertig sind.
+  en: |
+    Your rental agreement is ready for review!
+
+    Renter: __RENTER_NAME__
+    Deposit: __AMOUNT__
+    Duration: __DURATION_HOURS__ hour(s)
+
+    You can edit the duration, names, item values, and add/remove photos before sending. When ready, click "Send to Renter".
+  es: |
+    ¡Tu acuerdo de alquiler está listo para revisar!
+
+    Arrendatario: __RENTER_NAME__
+    Depósito: __AMOUNT__
+    Duración: __DURATION_HOURS__ hora(s)
+
+    Puedes editar la duración, nombres, valores de items, y agregar/quitar fotos antes de enviar. Cuando esté listo, haz clic en "Enviar al Arrendatario".
+  fr: |
+    Votre contrat de location est prêt à être révisé !
+
+    Locataire: __RENTER_NAME__
+    Dépôt: __AMOUNT__
+    Durée: __DURATION_HOURS__ heure(s)
+
+    Vous pouvez modifier la durée, les noms, les valeurs et ajouter/supprimer des photos. Cliquez sur "Envoyer au Locataire" quand prêt.
+  it: |
+    Il tuo contratto di noleggio è pronto per la revisione!
+
+    Noleggiatore: __RENTER_NAME__
+    Deposito: __AMOUNT__
+    Durata: __DURATION_HOURS__ ora/e
+
+    Puoi modificare durata, nomi, valori e aggiungere/rimuovere foto. Quando pronto, clicca "Invia al Noleggiatore".
+  nl: |
+    Uw huurovereenkomst is klaar voor review!
+
+    Huurder: __RENTER_NAME__
+    Borg: __AMOUNT__
+    Duur: __DURATION_HOURS__ uur
+
+    Je kunt de duur, namen, waarden en foto's aanpassen. Klik op "Verzenden naar Huurder" wanneer klaar.
+
+renter_payment_ready_body:
+  de: |
+    Toll! Der Mietvertrag mit __OWNER_NAME__ wurde genehmigt.
+
+    Betrag: __AMOUNT__
+    Dauer: __DURATION__ Stunde(n)
+
+    Bitte fahren Sie mit der Kautionszahlung fort, um Ihre Miete zu bestätigen.
+  en: |
+    Great! The rental agreement with __OWNER_NAME__ has been approved.
+
+    Amount: __AMOUNT__
+    Duration: __DURATION__ hour(s)
+
+    Please proceed with the security deposit payment to confirm your rental.
+  es: |
+    ¡Genial! El acuerdo de alquiler con __OWNER_NAME__ ha sido aprobado.
+
+    Monto: __AMOUNT__
+    Duración: __DURATION__ hora(s)
+
+    Por favor procede con el pago del depósito de garantía para confirmar tu alquiler.
+  fr: |
+    Super ! Le contrat de location avec __OWNER_NAME__ a été approuvé.
+
+    Montant : __AMOUNT__
+    Durée : __DURATION__ heure(s)
+
+    Veuillez procéder au paiement du dépôt de garantie pour confirmer votre location.
+  it: |
+    Ottimo! Il contratto di noleggio con __OWNER_NAME__ è stato approvato.
+
+    Importo: __AMOUNT__
+    Durata: __DURATION__ ora/e
+
+    Procedi con il pagamento del deposito cauzionale per confermare il tuo noleggio.
+  nl: |
+    Geweldig! De huurovereenkomst met __OWNER_NAME__ is goedgekeurd.
+
+    Bedrag: __AMOUNT__
+    Duur: __DURATION__ uur
+
+    Ga verder met de betaling van de borgsom om je huur te bevestigen.
+
+renter_payment_ready_button:
+  de: "Kaution Bezahlen"
+  en: "Pay Security Deposit"
+  es: "Pagar Depósito"
+  fr: "Payer le Dépôt"
+  it: "Paga Deposito"
+  nl: "Borgsom Betalen"
+
+renter_payment_ready_header:
+  de: "Zahlung Bereit"
+  en: "Payment Ready"
+  es: "Pago Listo"
+  fr: "Paiement Prêt"
+  it: "Pagamento Pronto"
+  nl: "Betaling Klaar"
+
+review_agreement_button:
+  de: "Vertrag Prüfen"
+  en: "Review Agreement"
+  es: "Revisar Acuerdo"
+  fr: "Revoir Contrat"
+  it: "Rivedi Contratto"
+  nl: "Bekijk Contract"
+
+view_agreement_button:
+  de: "Vertrag Ansehen"
+  en: "View Agreement"
+  es: "Ver Acuerdo"
+  fr: "Voir le Contrat"
+  it: "Vedi Contratto"
+  nl: "Overeenkomst"

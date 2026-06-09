@@ -1,0 +1,107 @@
+ambiguous_location_button:
+  de: "Land auswählen"
+  en: "Select country"
+  es: "Seleccionar país"
+  fr: "Sélectionner le pays"
+  it: "Seleziona paese"
+  nl: "Selecteer land"
+
+ambiguous_location_in_offer:
+  de: "Wir konnten nicht identifizieren, welchen von all den Orten namens '__LOCATION_NAME__' Sie meinen."
+  en: "We couldn't identify which of all the places called '__LOCATION_NAME__' you're referring to."
+  es: "No pudimos identificar a cual de todos los lugares que se llaman '__LOCATION_NAME__' te estas refiriendo."
+  fr: "Nous n'avons pas pu identifier lequel de tous les endroits appelés '__LOCATION_NAME__' vous voulez dire."
+  it: "Non siamo riusciti a identificare quale di tutti i luoghi chiamati '__LOCATION_NAME__' intendi."
+  nl: "We konden niet identificeren welke van alle plaatsen genaamd '__LOCATION_NAME__' je bedoelt."
+
+ambiguous_location_prompt:
+  de: |
+    Ich habe '__LOCATION_NAME__' in mehreren Ländern gefunden.
+    Welches meinen Sie?
+  en: |
+    I found '__LOCATION_NAME__' in several countries.
+    Which one do you mean?
+  es: |
+    Encontré '__LOCATION_NAME__' en varios países.
+    ¿Cuál te interesa?
+  fr: |
+    J'ai trouvé '__LOCATION_NAME__' dans plusieurs pays.
+    Lequel vous intéresse?
+  it: |
+    Ho trovato '__LOCATION_NAME__' in diversi paesi.
+    Quale intendi?
+  nl: |
+    Ik heb '__LOCATION_NAME__' in verschillende landen gevonden.
+    Welke bedoel je?
+
+find_gear_nearby_button:
+  de: "Ausrüstung in der Nähe finden"
+  en: "Find gear nearby"
+  es: "Buscar equipo cerca"
+  fr: "Trouver du matériel à proximité"
+  it: "Trova attrezzatura nelle vicinanze"
+  nl: "Uitrusting in de buurt vinden"
+
+i_am_interested:
+  de: "Interessiert mich"
+  en: "I'm interested"
+  es: "Me interesa"
+  fr: "Ça m'intéresse"
+  it: "Mi interessa"
+  nl: "Ik ben geïnteresseerd"
+
+location_not_found:
+  de: |
+    Oops, ich konnte den Standort '__LOCATION_NAME__' nicht finden.
+    Bitte überprüfen Sie die Schreibweise oder versuchen Sie einen anderen Standortnamen.
+  en: |
+    Oops, I couldn't find the location '__LOCATION_NAME__'.
+    Please check the spelling or try a different location name.
+  es: |
+    Oops, no pude encontrar la ubicación '__LOCATION_NAME__'.
+    Por favor verifica la ortografía o nombra una ubicación diferente.
+  fr: |
+    Oops, je n'ai pas pu trouver l'emplacement '__LOCATION_NAME__'.
+    Veuillez vérifier l'orthographe ou essayer un nom d'emplacement différent.
+  it: |
+    Oops, non sono riuscito a trovare la posizione '__LOCATION_NAME__'.
+    Per favore controlla l'ortografia o prova con un nome di posizione diverso.
+  nl: |
+    Oops, ik kon de locatie '__LOCATION_NAME__' niet vinden.
+    Controleer de spelling of probeer een andere locatienaam.
+
+location_options:
+  de: "Was möchtest du mit diesem Ort machen?"
+  en: "What would you like to do with this location?"
+  es: "¿Qué te gustaría hacer con esta ubicación?"
+  fr: "Que souhaitez-vous faire avec ce lieu ?"
+  it: "Cosa vuoi fare con questa posizione?"
+  nl: "Wat wil je doen met deze locatie?"
+
+location_updated:
+  de: |
+    Super! Deine Position wurde aktualisiert (lat: __LAT__, lng: __LNG__).
+    Dein angebotenes Equipment wird nun in __LOCATION_NAME__ angezeigt.
+  en: |
+    Sweet! Your position has been updated (lat: __LAT__, lng: __LNG__).
+    Your offered equipment will now appear listed in __LOCATION_NAME__.
+  es: |
+    Super! Tu posición ha sido actualizada (lat: __LAT__, lng: __LNG__).
+    Ahora tu equipo disponible aparecerá en __LOCATION_NAME__.
+  fr: |
+    Parfait ! Votre position a été mise à jour (lat : __LAT__, lng : __LNG__).
+    Votre équipement proposé apparaîtra désormais à __LOCATION_NAME__.
+  it: |
+    Ottimo! La tua posizione è stata aggiornata (lat: __LAT__, lng: __LNG__).
+    La tua attrezzatura offerta apparirà ora in __LOCATION_NAME__.
+  nl: |
+    Top! Je positie is bijgewerkt (lat: __LAT__, lng: __LNG__).
+    Je aangeboden uitrusting verschijnt nu in __LOCATION_NAME__.
+
+update_location_button:
+  de: "Standort aktual."
+  en: "Update location"
+  es: "Actualizar ubicación"
+  fr: "Mettre à jour lieu"
+  it: "Aggiorna posizione"
+  nl: "Locatie bijwerken"

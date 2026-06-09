@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAQ - KiteToGo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        .intro {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .intro h2 {
+            margin: 0 0 10px 0;
+            color: white;
+        }
+        .intro p {
+            margin: 0;
+            opacity: 0.95;
+        }
+        .category {
+            margin-bottom: 35px;
+        }
+        .category-title {
+            color: #2c3e50;
+            font-size: 1.4em;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .faq-question {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question:hover {
+            background: #e9ecef;
+        }
+        .faq-answer {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e9ecef;
+        }
+        .faq-answer ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .faq-answer li {
+            margin-bottom: 8px;
+        }
+        .highlight-box {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .price-tag {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+        .security-badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+        .language-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .language-tag {
+            background: #ecf0f1;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+        }
+        .step-number {
+            background: #3498db;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .contact-section {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .contact-section h3 {
+            margin-top: 0;
+        }
+        .telegram-btn {
+            display: inline-block;
+            background: #0088cc;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .telegram-btn:hover {
+            background: #006699;
+        }
+        .footer-links {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+        }
+        .footer-links a {
+            color: #3498db;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="text-align: right; margin-bottom: 15px;">
+            <a
+                href="#"
+                onclick="window.open('https://translate.google.com/translate?sl=auto&tl=auto&u=' + encodeURIComponent(window.location.href), '_blank'); return false;"
+                style="color: #3498db; text-decoration: none; font-size: 0.9em;"
+            >
+                🌐 Translate this page
+            </a>
+        </div>
+
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="intro">
+            <h2>Welcome to KiteToGo!</h2>
+            <p>The easiest way to rent kitesurfing equipment directly from other kiters via WhatsApp</p>
+        </div>
+
+        <!-- Getting Started -->
+        <div class="category">
+            <h2 class="category-title">Getting Started</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">What is KiteToGo?</div>
+                <div class="faq-answer">
+                    <p>KiteToGo is a peer-to-peer kitesurfing equipment rental platform that connects kiters who have gear to rent with those who need it. Everything works through WhatsApp, making it as easy as chatting with a friend.</p>
+                    <p>Whether you're traveling and need gear at your destination, or you have equipment sitting idle that could earn you money, KiteToGo makes the connection simple and secure.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I start using KiteToGo?</div>
+                <div class="faq-answer">
+                    <p>Simply send a WhatsApp message to our number! You can:</p>
+                    <ul>
+                        <li>Send a text message describing what you need</li>
+                        <li>Send a voice message in any supported language</li>
+                        <li>Share your location to find gear nearby</li>
+                    </ul>
+                    <p>Our AI assistant understands natural language, so just write what you need as you would to a friend.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- For Renters -->
+        <div class="category">
+            <h2 class="category-title">Finding Gear to Rent</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I find gear near me?</div>
+                <div class="faq-answer">
+                    <p>There are several ways to search for available equipment:</p>
+                    <ul>
+                        <li><strong>By location name:</strong> "I'm looking for kites in Tarifa"</li>
+                        <li><strong>Share your location:</strong> Use WhatsApp's location sharing feature</li>
+                        <li><strong>Check availability:</strong> "Where can I find kite gear for rent?"</li>
+                        <li><strong>Availability in specific country:</strong> "Where can I rent something in Spain?"</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What equipment can I rent?</div>
+                <div class="faq-answer">
+                    <p>You can find all types of kitesurfing equipment:</p>
+                    <ul>
+                        <li><strong>Kites:</strong> Various brands and sizes</li>
+                        <li><strong>Boards:</strong> Twin tips, surfboards, foil boards</li>
+                        <li><strong>Bars:</strong> Control bars with lines</li>
+                        <li><strong>Harnesses:</strong> Waist and seat harnesses</li>
+                        <li><strong>Wetsuits:</strong> Various thicknesses</li>
+                        <li><strong>Accessories:</strong> Pumps, helmets, vests, etc.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How much does it cost to access owner contacts?</div>
+                <div class="faq-answer">
+                    <p>When you find gear you're interested in, you can request the owner's contact information.</p>
+                    <div class="highlight-box">
+                        <p>Contact access fee: <span class="price-tag">3.00 EUR</span></p>
+                        <p>This one-time fee gives you access to contact all owners in your search results directly via WhatsApp.</p>
+                    </div>
+                    <p>This small fee helps maintain the platform and ensures serious inquiries for gear owners.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What if I pay but can't rent any gear?</div>
+                <div class="faq-answer">
+                    <p>We understand that sometimes things don't work out — maybe the owner's price is too high, the gear isn't available on your dates, or you simply can't reach an agreement.</p>
+                    <div class="highlight-box">
+                        <p>If you can't reach a deal with any owner, just message us and we'll make it right.</p>
+                    </div>
+                    <p>We want you to feel confident when you hit that button. Your satisfaction matters more to us than a one-time fee.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What happens after I pay for contact access?</div>
+                <div class="faq-answer">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>You receive the owner's WhatsApp number and name</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>Contact them directly to discuss rental details, prices, and dates</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>Arrange pickup/delivery and agree on terms</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>The owner may request a security deposit through our secure system</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- For Owners -->
+        <div class="category">
+            <h2 class="category-title">Offering Your Gear for Rent</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I list my equipment?</div>
+                <div class="faq-answer">
+                    <p>Adding your gear is simple! Just send us a message describing your equipment. For example:</p>
+                    <ul>
+                        <li>"I have a 12m Duotone Evo 2023 for rent in Tarifa"</li>
+                        <li>"I want to publish my North X-Ride board for rent"</li>
+                    </ul>
+                    <p>You can include details like:</p>
+                    <ul>
+                        <li>Brand and model</li>
+                        <li>Size</li>
+                        <li>Year</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I set my location?</div>
+                <div class="faq-answer">
+                    <p>You can set your location by:</p>
+                    <ul>
+                        <li><strong>Sharing your WhatsApp location:</strong> Most accurate method</li>
+                        <li><strong>Naming your location while publishing gear:</strong> "I want to publish my North Atmos in Barcelona"</li>
+                    </ul>
+                    <p>Your location determines which renters can find you when searching for equipment.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I view my listed gear?</div>
+                <div class="faq-answer">
+                    <p>Simply ask "Show my gear" or "List my inventory" and you'll see all your currently listed equipment with details.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is there a fee for listing equipment?</div>
+                <div class="faq-answer">
+                    <p><strong>No!</strong> Listing your equipment is completely free. You only interact directly with potential renters who have paid for contact access, ensuring you receive serious inquiries.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security Deposits -->
+        <div class="category">
+            <h2 class="category-title">Security Deposits</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">What is a security deposit?</div>
+                <div class="faq-answer">
+                    <p>A security deposit protects gear owners against potential damage or loss. It's an <strong>authorization hold</strong> on the renter's card, not an actual charge.</p>
+                    <div class="highlight-box">
+                        <span class="security-badge">Important</span>
+                        <p style="margin-top: 10px;">The money is never actually taken from the renter's account. It's only "held" by the bank and automatically released after the rental period.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does the deposit process work?</div>
+                <div class="faq-answer">
+                    <p><strong>For Owners:</strong></p>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>Request a security deposit by messaging us. You will be asked to attach the renter's contact</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>Inform rental duration, equipment items being rented & define their replacement value.</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>Review the rental agreement & add pictures of every repair or scratch in the gear that you will rent.</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>Once done, the system sends the agreement to the renter for him to review (He may ask for modifications before accepting).The renter receives a secure payment link</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div>Once the renter agrees, he will be forwarded to the payment page.</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <div>Once authorized, you're notified and can safely hand the gear over and proceed with the rental</div>
+                    </div>
+
+                    <p style="margin-top: 20px;"><strong>For Renters:</strong></p>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>You receive a WhatsApp message with the agreement containing the deposit request details</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>Review & agree/request for modifications</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>Once you have checked the gear in person, click the secure payment link to authorize the deposit & complete the 3D Secure verification on your bank's page</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>The hold is released after the rental ends</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">When is the deposit released?</div>
+                <div class="faq-answer">
+                    <p>The deposit authorization is released:</p>
+                    <ul>
+                        <li><strong>Manually</strong> by the owner at any time if the rental concludes early</li>
+                        <li><strong>Captured</strong> (partially most likely) only if there's damage and both parties agree (or dispute resolution is needed)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What payment methods are accepted for deposits?</div>
+                <div class="faq-answer">
+                    <p>We use Stripe for secure payment processing, which supports:</p>
+                    <ul>
+                        <li>All major credit cards (Visa, Mastercard, American Express)</li>
+                        <li>Many debit cards</li>
+                        <li>Apple Pay and Google Pay (where supported)</li>
+                    </ul>
+                    <p>All transactions include 3D Secure authentication for maximum security.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trust & Safety -->
+        <div class="category">
+            <h2 class="category-title">Trust & Safety</h2>
+          
+            <div class="faq-item">
+                <div class="faq-question">Who's behind KiteToGo?</div>
+                <div class="faq-answer">
+                    <p>I am a software developer who's taking the indie route.</p>
+                    <p>I would kite every day if I could do so.</p>
+                    <p>If you ask around for my name, you may find me around Barcelona or Quilmes (Argentina). My name is <b>Facundo</b></p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is my information safe?</div>
+                <div class="faq-answer">
+                    <p>Yes! I take privacy seriously, both out of principle & law enforcement:</p>
+                    <ul>
+                        <li><strong>Contact sharing requires consent:</strong> Your WhatsApp number is only shared after 1) you explicitly agree & 2) potential renter pays fee.</li>
+                        <li><strong>Location:</strong> People can only now in which city/town you are offering gear for rental. Your exact location will remain hidden (in case you've attached in a message).</li>
+                        <li><strong>Secure payments:</strong> All transactions go through Stripe with bank-level security</li>
+                        <li><strong>Encrypted communications:</strong> All WhatsApp messages use end-to-end encryption</li>
+                        <li><strong>GDPR compliant:</strong> You can request deletion of your data at any time</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What if there's a problem with a rental?</div>
+                <div class="faq-answer">
+                    <p>If any issues arise:</p>
+                    <ul>
+                        <li>Document the problem with photos</li>
+                        <li>Contact us immediately via WhatsApp</li>
+                        <li>We'll help mediate between both parties</li>
+                        <li>Security deposits can be partially captured if damage is verified</li>
+                        <li>Rental agreement asks for both party's email foreseeing that phone/whatsapp access may be lost</li>
+                        <li>Upon renter disappearing 24 hours after rental completion time, funds will be fully withdrawn from the security deposit.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Voice Messages -->
+        <div class="category">
+            <h2 class="category-title">Voice Messages</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I send voice messages?</div>
+                <div class="faq-answer">
+                    <p><strong>Yes!</strong> You can send voice messages in any language (for better results we kindly ask you to be clear). Our AI will:</p>
+                    <ul>
+                        <li>Automatically transcribe your voice message</li>
+                        <li>Detect the language you're speaking</li>
+                        <li>Process your request just like a text message</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical -->
+        <div class="category">
+            <h2 class="category-title">Technical Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Why do I need to verify my phone number for deposits?</div>
+                <div class="faq-answer">
+                    <p>When authorizing a security deposit, you may be asked to confirm the phone number you're using matches the one on the deposit request. This is a security measure to prevent fraudulent deposit authorizations.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What happens if a payment fails?</div>
+                <div class="faq-answer">
+                    <p>If a payment fails:</p>
+                    <ul>
+                        <li>You'll receive an error message explaining what went wrong</li>
+                        <li>Common issues include insufficient funds or card restrictions</li>
+                        <li>You can try again with a different payment method</li>
+                        <li>No charges are made until the payment succeeds</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I delete my account and data?</div>
+                <div class="faq-answer">
+                    <p>You can request data deletion at any time by:</p>
+                    <ul>
+                        <li>Sending "Delete my data" via WhatsApp</li>
+                        <li>Emailing privacy@kitetogo.com</li>
+                    </ul>
+                    <p>Your data will be permanently removed within 30 days.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h3>Still have questions?</h3>
+            <p>I am here to help! Send me a message on Telegram and I'll get back to you as soon as possible.</p>
+            <a href="https://t.me/facundoarg" class="telegram-btn">Chat with me on Telegram</a>
+        </div>
+
+        <div class="footer-links">
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms-of-service">Terms of Service</a>
+        </div>
+    </div>
+</body>
+</html>

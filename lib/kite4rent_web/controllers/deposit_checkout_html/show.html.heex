@@ -1,0 +1,70 @@
+<div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+      <%= Kite4rentWeb.DepositCheckoutTranslations.t(:title, @language) %>
+    </h2>
+    <p class="mt-2 text-center text-sm text-gray-600">
+      <%= Kite4rentWeb.DepositCheckoutTranslations.t(:subtitle, @language) %>
+    </p>
+  </div>
+
+  <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+    <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+      <div class="space-y-6">
+        <div class="border-b border-gray-200 pb-4">
+          <h3 class="text-lg font-medium text-gray-900"><%= Kite4rentWeb.DepositCheckoutTranslations.t(:deposit_details, @language) %></h3>
+          <dl class="mt-4 space-y-2">
+            <div class="flex justify-between">
+              <dt class="text-sm text-gray-500"><%= Kite4rentWeb.DepositCheckoutTranslations.t(:amount, @language) %></dt>
+              <dd class="text-sm font-medium text-gray-900">
+                <%= @deposit.amount %> <%= @deposit.currency %>
+              </dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-sm text-gray-500"><%= Kite4rentWeb.DepositCheckoutTranslations.t(:duration, @language) %></dt>
+              <dd class="text-sm font-medium text-gray-900">
+                <%= @deposit.duration_hours %> <%= Kite4rentWeb.DepositCheckoutTranslations.t(:hours, @language) %>
+              </dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-sm text-gray-500"><%= Kite4rentWeb.DepositCheckoutTranslations.t(:owner, @language) %></dt>
+              <dd class="text-sm font-medium text-gray-900">
+                <%= @deposit.owner.last_used_fullname || @deposit.owner.name || "Gear Owner" %>
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-md p-4">
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <svg class="h-5 w-5 text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div class="ml-3">
+              <h3 class="text-sm font-medium text-blue-800">
+                <%= Kite4rentWeb.DepositCheckoutTranslations.t(:authorization_hold_title, @language) %>
+              </h3>
+              <div class="mt-2 text-sm text-blue-700">
+                <p>
+                  <%= Kite4rentWeb.DepositCheckoutTranslations.t(:authorization_hold_text, @language) %>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form action={~p"/deposit-checkout/#{@deposit.id}"} method="post">
+          <input type="hidden" name="_csrf_token" value={get_csrf_token()} />
+          <button
+            type="submit"
+            class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            <%= Kite4rentWeb.DepositCheckoutTranslations.t(:authorize_button, @language) %>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<section class="bg-white py-8 px-6 max-w-2xl mx-auto">
+  <%= if @payment_info do %>
+    <div class="text-center">
+      <div class="text-6xl mb-4">🎉</div>
+      <h1 class="text-3xl font-bold text-green-600 mb-6">Payment Confirmed!</h1>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-gray-800 mb-3">What's Next?</h3>
+        <ul class="text-left space-y-2 text-gray-700">
+          <li>✅ You have access to the lessor contacts information</li>
+          <li>📱 You can now request them through WhatsApp</li>
+          <%!-- <li>📧 A confirmation email has been sent to your email address</li> --%>
+        </ul>
+      </div>
+
+      <div class="mt-6 text-sm text-gray-600">
+        <p>
+          If you have any questions, please contact us at +34 644 601 793 or
+          <a href="mailto:support@kite4rent.com" class="text-blue-600 hover:text-blue-800">
+            support@kite4rent.com
+          </a>
+        </p>
+      </div>
+    </div>
+  <% else %>
+    <div class="text-center">
+      <div class="text-6xl mb-4">🎉</div>
+      <h1 class="text-3xl font-bold text-green-600 mb-6">Payment Confirmed!</h1>
+
+      <p class="text-lg text-gray-700 mb-6">
+        Thank you for your payment! You now have access to the lessor contacts information.
+      </p>
+
+      <p class="text-gray-600">
+        We appreciate your business! If you have any questions, please email <a
+          href="mailto:support@kite4rent.com"
+          class="text-blue-600 hover:text-blue-800"
+        >support@kite4rent.com</a>.
+      </p>
+    </div>
+  <% end %>
+</section>

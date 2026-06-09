@@ -1,0 +1,1039 @@
+deposit_action_no_longer_available:
+  de: "Diese Option ist nicht mehr verfügbar. Bitte fahren Sie mit dem aktuellen Schritt fort."
+  en: "This option is no longer available. Please continue with the current step."
+  es: "Esta opción ya no está disponible. Por favor continúa con el paso actual."
+  fr: "Cette option n'est plus disponible. Veuillez continuer avec l'étape en cours."
+  it: "Questa opzione non è più disponibile. Continua con il passaggio corrente."
+  nl: "Deze optie is niet meer beschikbaar. Ga verder met de huidige stap."
+
+deposit_add_more_no_btn:
+  de: "Nein, weiter"
+  en: "No, continue"
+  es: "No, continuar"
+  fr: "Non, continuer"
+  it: "No, continua"
+  nl: "Nee, doorgaan"
+
+deposit_add_more_yes_btn:
+  de: "Ja, mehr hinzufügen"
+  en: "Yes, add more"
+  es: "Sí, agregar más"
+  fr: "Oui, ajouter"
+  it: "Sì, aggiungi"
+  nl: "Ja, meer toevoegen"
+
+deposit_ask_currency:
+  de: |
+    Welche Währung verwenden Sie für die Ersatzwerte Ihrer Ausrüstung?
+
+    (Beginnend mit: __ITEM__)
+  en: |
+    Which currency will you use to specify the replacement values for your equipment?
+
+    (Starting with: __ITEM__)
+  es: |
+    ¿Qué moneda usarás para indicar los valores de reposición de tu equipo?
+
+    (Empezando por: __ITEM__)
+  fr: |
+    Quelle devise utiliserez-vous pour indiquer les valeurs de remplacement de votre équipement ?
+
+    (En commençant par : __ITEM__)
+  it: |
+    Quale valuta userai per indicare i valori di sostituzione della tua attrezzatura?
+
+    (Iniziando con: __ITEM__)
+  nl: |
+    Welke valuta gebruik je voor de vervangingswaarden van je uitrusting?
+
+    (Beginnend met: __ITEM__)
+
+deposit_ask_duration:
+  de: |
+    Gesamtkaution: __TOTAL__ für __ITEM_COUNT__ Artikel
+
+    Wie viele Stunden dauert die Miete? (2-72)
+  en: |
+    Total deposit: __TOTAL__ for __ITEM_COUNT__ item(s)
+
+    How many hours will the rental last? (2-72)
+  es: |
+    Depósito total: __TOTAL__ por __ITEM_COUNT__ ítem(s)
+
+    ¿Cuántas horas durará el alquiler? (2-72)
+  fr: |
+    Dépôt total : __TOTAL__ pour __ITEM_COUNT__ article(s)
+
+    Combien d'heures durera la location ? (2-72)
+  it: |
+    Deposito totale: __TOTAL__ per __ITEM_COUNT__ articolo(i)
+
+    Quante ore durerà il noleggio? (2-72)
+  nl: |
+    Totale borgsom: __TOTAL__ voor __ITEM_COUNT__ item(s)
+
+    Hoeveel uur duurt de verhuur? (2-72)
+
+deposit_ask_value:
+  de: |
+    Was ist der Ersatzwert in __CURRENCY__ für Ihre __ITEM__?
+
+    (Sie können dies später im Mietvertrag bearbeiten)
+  en: |
+    What's the replacement value in __CURRENCY__ for your __ITEM__?
+
+    (You can edit this later in the rental agreement)
+  es: |
+    ¿Cuál es el valor de reposición en __CURRENCY__ de tu __ITEM__?
+
+    (Puedes editarlo después en el acuerdo de alquiler)
+  fr: |
+    Quelle est la valeur de remplacement en __CURRENCY__ de votre __ITEM__ ?
+
+    (Vous pouvez le modifier plus tard dans le contrat de location)
+  it: |
+    Qual è il valore di sostituzione in __CURRENCY__ per il tuo __ITEM__?
+
+    (Puoi modificarlo più tardi nel contratto di noleggio)
+  nl: |
+    Wat is de vervangingswaarde in __CURRENCY__ voor je __ITEM__?
+
+    (Je kunt dit later wijzigen in het huurcontract)
+
+deposit_ask_value_with_hint:
+  de: |
+    Was ist der Ersatzwert in __CURRENCY__ für Ihre __ITEM__?
+
+    Zuletzt verwendet: __SUGGESTED_VALUE__
+    (Sie können dies später im Mietvertrag bearbeiten)
+  en: |
+    What's the replacement value in __CURRENCY__ for your __ITEM__?
+
+    Last used: __SUGGESTED_VALUE__
+    (You can edit this later in the rental agreement)
+  es: |
+    ¿Cuál es el valor de reposición en __CURRENCY__ de tu __ITEM__?
+
+    Último usado: __SUGGESTED_VALUE__
+    (Puedes editarlo después en el acuerdo de alquiler)
+  fr: |
+    Quelle est la valeur de remplacement en __CURRENCY__ de votre __ITEM__ ?
+
+    Dernier utilisé : __SUGGESTED_VALUE__
+    (Vous pouvez le modifier plus tard dans le contrat de location)
+  it: |
+    Qual è il valore di sostituzione in __CURRENCY__ per il tuo __ITEM__?
+
+    Ultimo usato: __SUGGESTED_VALUE__
+    (Puoi modificarlo più tardi nel contratto di noleggio)
+  nl: |
+    Wat is de vervangingswaarde in __CURRENCY__ voor je __ITEM__?
+
+    Laatst gebruikt: __SUGGESTED_VALUE__
+    (Je kunt dit later wijzigen in het huurcontract)
+
+deposit_authorized_owner:
+  de: |
+    Die Kaution von __AMOUNT__ von __RENTER_NAME__ wurde autorisiert!
+
+    Die Sperrung ist aktiv und wird nach __DURATION_HOURS__ Stunde(n) automatisch freigegeben, es sei denn, Sie müssen sie erfassen.
+  en: |
+    The security deposit of __AMOUNT__ from __RENTER_NAME__ has been authorized!
+
+    The hold is active and will be automatically released after __DURATION_HOURS__ hour(s) unless you need to capture it.
+  es: |
+    El depósito de garantía de __AMOUNT__ de __RENTER_NAME__ ha sido autorizado!
+
+    La retención está activa y será liberada automáticamente después de __DURATION_HOURS__ hora(s) a menos que necesites capturarlo.
+  fr: |
+    Le dépôt de garantie de __AMOUNT__ de __RENTER_NAME__ a été autorisé !
+
+    Le blocage est actif et sera automatiquement libéré après __DURATION_HOURS__ heure(s) sauf si vous devez le capturer.
+  it: |
+    Il deposito cauzionale di __AMOUNT__ da __RENTER_NAME__ è stato autorizzato!
+
+    Il blocco è attivo e verrà automaticamente rilasciato dopo __DURATION_HOURS__ ora/e a meno che tu non debba catturarlo.
+  nl: |
+    De borgsom van __AMOUNT__ van __RENTER_NAME__ is geautoriseerd!
+
+    De blokkering is actief en zal automatisch worden vrijgegeven na __DURATION_HOURS__ uur tenzij je het moet vastleggen.
+
+deposit_authorized_renter:
+  de: |
+    Ihre Kaution von __AMOUNT__ für __OWNER_NAME__ ist jetzt aktiv.
+
+    Dies ist nur eine Autorisierungssperre - Ihre Karte wurde NICHT belastet.
+    Die Sperre wird automatisch freigegeben, wenn die Miete erfolgreich endet.
+  en: |
+    Your security deposit of __AMOUNT__ for __OWNER_NAME__ is now active.
+
+    This is only an authorization hold - your card has NOT been charged.
+    The hold will be automatically released when the rental ends successfully.
+  es: |
+    Tu depósito de garantía de __AMOUNT__ para __OWNER_NAME__ está ahora activo.
+
+    Esto es solo una retención de autorización - tu tarjeta NO ha sido cobrada.
+    La retención será liberada automáticamente cuando el alquiler termine exitosamente.
+  fr: |
+    Votre dépôt de garantie de __AMOUNT__ pour __OWNER_NAME__ est maintenant actif.
+
+    C'est seulement un blocage d'autorisation - votre carte n'a PAS été débitée.
+    Le blocage sera automatiquement libéré lorsque la location se terminera avec succès.
+  it: |
+    Il tuo deposito cauzionale di __AMOUNT__ per __OWNER_NAME__ è ora attivo.
+
+    Questo è solo un blocco di autorizzazione - la tua carta NON è stata addebitata.
+    Il blocco verrà automaticamente rilasciato quando il noleggio terminerà con successo.
+  nl: |
+    Je borgsom van __AMOUNT__ voor __OWNER_NAME__ is nu actief.
+
+    Dit is alleen een autorisatieblocking - je kaart is NIET belast.
+    De blokkering wordt automatisch vrijgegeven wanneer de verhuur succesvol eindigt.
+
+deposit_checkout_button:
+  de: "Kaution autorisieren"
+  en: "Authorize Deposit"
+  es: "Autorizar Depósito"
+  fr: "Autoriser le dépôt"
+  it: "Autorizza deposito"
+  nl: "Borgsom autoriseren"
+
+deposit_checkout_ready:
+  de: |
+    Der Eigentümer hat eine Kaution von __AMOUNT__ für __DURATION__ angefordert.
+
+    Dies ist eine Autorisierung - Ihre Karte wird nicht belastet, es sei denn, es entsteht ein Schaden. Klicken Sie unten, um zu autorisieren.
+  en: |
+    The owner has requested a security deposit of __AMOUNT__ for __DURATION__.
+
+    This is an authorization hold - your card won't be charged unless damage occurs. Click below to authorize.
+  es: |
+    El propietario ha solicitado un depósito de garantía de __AMOUNT__ por __DURATION__.
+
+    Esto es una retención temporal - tu tarjeta no será cobrada a menos que ocurra algún daño. Haz clic abajo para autorizar.
+  fr: |
+    Le propriétaire a demandé un dépôt de garantie de __AMOUNT__ pour __DURATION__.
+
+    C'est une autorisation de prélèvement - votre carte ne sera pas débitée sauf en cas de dommages. Cliquez ci-dessous pour autoriser.
+  it: |
+    Il proprietario ha richiesto un deposito cauzionale di __AMOUNT__ per __DURATION__.
+
+    Questo è un blocco di autorizzazione - la tua carta non verrà addebitata a meno che non si verifichino danni. Clicca sotto per autorizzare.
+  nl: |
+    De eigenaar heeft een borgsom van __AMOUNT__ voor __DURATION__ aangevraagd.
+
+    Dit is een autorisatieblocking - je kaart wordt niet belast tenzij er schade optreedt. Klik hieronder om te autoriseren.
+
+deposit_contact_not_registered:
+  de: "__CONTACT_NAME__ hat KiteToGo noch nicht verwendet. Bitten Sie sie/ihn, zuerst eine Nachricht an diese Nummer zu senden und dann den Kontakt erneut zu teilen."
+  en: "__CONTACT_NAME__ hasn't used KiteToGo yet. Ask them to send a message to this number first, then share their contact again."
+  es: "__CONTACT_NAME__ aún no ha usado KiteToGo. Pídele que envíe un mensaje a este número primero y luego comparte su contacto nuevamente."
+  fr: "__CONTACT_NAME__ n'a pas encore utilisé KiteToGo. Demandez-lui d'envoyer d'abord un message à ce numéro, puis partagez à nouveau son contact."
+  it: "__CONTACT_NAME__ non ha ancora usato KiteToGo. Chiedigli di inviare prima un messaggio a questo numero, poi condividi di nuovo il suo contatto."
+  nl: "__CONTACT_NAME__ heeft KiteToGo nog niet gebruikt. Vraag hen eerst een bericht naar dit nummer te sturen en deel dan opnieuw hun contact."
+
+deposit_created_request_contact:
+  de: |
+    Kautionsanfrage erfolgreich erstellt!
+
+    Betrag: __AMOUNT__
+    Dauer: __DURATION__
+
+    Teilen Sie jetzt den Kontakt des Mieters, um die Kaution anzufordern.
+  en: |
+    Security deposit request created successfully!
+
+    Amount: __AMOUNT__
+    Duration: __DURATION__
+
+    Now share the renter's contact so we can request the security deposit from them.
+  es: |
+    ¡Solicitud de depósito de garantía creada exitosamente!
+
+    Monto: __AMOUNT__
+    Duración: __DURATION__
+
+    Ahora comparte el contacto del arrendatario para solicitarle el depósito de garantía.
+  fr: |
+    Demande de dépôt de garantie créée avec succès !
+
+    Montant : __AMOUNT__
+    Durée : __DURATION__
+
+    Partagez maintenant le contact du locataire pour lui demander le dépôt de garantie.
+  it: |
+    Richiesta di deposito cauzionale creata con successo!
+
+    Importo: __AMOUNT__
+    Durata: __DURATION__
+
+    Ora condividi il contatto del locatario per richiedere il deposito cauzionale.
+  nl: |
+    Borgsomverzoek succesvol aangemaakt!
+
+    Bedrag: __AMOUNT__
+    Duur: __DURATION__
+
+    Deel nu het contact van de huurder om de borgsom aan te vragen.
+
+deposit_created_review_agreement:
+  de: |
+    Kautionsanfrage für __CONTACT_NAME__ erstellt.
+
+    Gesamt: __AMOUNT__
+    Artikel: __ITEMS_COUNT__
+    Dauer: __DURATION_HOURS__ Stunde(n)
+
+    Sie können Dauer, Namen, Artikelwerte und Fotos auf der Vertragsseite bearbeiten, bevor Sie es an den Mieter senden.
+  en: |
+    Deposit request created for __CONTACT_NAME__.
+
+    Total: __AMOUNT__
+    Items: __ITEMS_COUNT__
+    Duration: __DURATION_HOURS__ hour(s)
+
+    You can edit the duration, names, item values, and add/remove photos on the agreement page before sending it to the renter.
+  es: |
+    Solicitud de depósito creada para __CONTACT_NAME__.
+
+    Total: __AMOUNT__
+    Items: __ITEMS_COUNT__
+    Duración: __DURATION_HOURS__ hora(s)
+
+    Puedes editar la duración, nombres, valores de items, y agregar/quitar fotos en la página del acuerdo antes de enviarlo al arrendatario.
+  fr: |
+    Demande de dépôt créée pour __CONTACT_NAME__.
+
+    Total: __AMOUNT__
+    Articles: __ITEMS_COUNT__
+    Durée: __DURATION_HOURS__ heure(s)
+
+    Vous pouvez modifier la durée, les noms, les valeurs des articles, et ajouter/supprimer des photos avant d'envoyer au locataire.
+  it: |
+    Richiesta di deposito creata per __CONTACT_NAME__.
+
+    Totale: __AMOUNT__
+    Articoli: __ITEMS_COUNT__
+    Durata: __DURATION_HOURS__ ora/e
+
+    Puoi modificare durata, nomi, valori degli articoli e aggiungere/rimuovere foto nella pagina del contratto prima di inviarlo al noleggiatore.
+  nl: |
+    Borgverzoek aangemaakt voor __CONTACT_NAME__.
+
+    Totaal: __AMOUNT__
+    Items: __ITEMS_COUNT__
+    Duur: __DURATION_HOURS__ uur
+
+    Je kunt de duur, namen, itemwaarden en foto's aanpassen op de overeenkomstpagina voordat je het naar de huurder stuurt.
+
+deposit_created_with_items:
+  de: |
+    Kautionsanfrage erstellt und an __CONTACT_NAME__ gesendet.
+
+    Gesamt: __AMOUNT__
+    Artikel: __ITEMS_COUNT__
+    Dauer: __DURATION_HOURS__ Stunde(n)
+
+    Sie werden benachrichtigt, wenn die Zahlung erfolgt ist.
+  en: |
+    Deposit request created and sent to __CONTACT_NAME__.
+
+    Total: __AMOUNT__
+    Items: __ITEMS_COUNT__
+    Duration: __DURATION_HOURS__ hour(s)
+
+    You'll be notified when they complete the payment.
+  es: |
+    Solicitud de depósito creada y enviada a __CONTACT_NAME__.
+
+    Total: __AMOUNT__
+    Items: __ITEMS_COUNT__
+    Duración: __DURATION_HOURS__ hora(s)
+
+    Te notificaremos cuando complete el pago.
+  fr: |
+    Demande de dépôt créée et envoyée à __CONTACT_NAME__.
+
+    Total: __AMOUNT__
+    Articles: __ITEMS_COUNT__
+    Durée: __DURATION_HOURS__ heure(s)
+
+    Vous serez notifié lorsqu'il effectuera le paiement.
+  it: |
+    Richiesta di deposito creata e inviata a __CONTACT_NAME__.
+
+    Totale: __AMOUNT__
+    Articoli: __ITEMS_COUNT__
+    Durata: __DURATION_HOURS__ ora/e
+
+    Sarai avvisato quando completerà il pagamento.
+  nl: |
+    Borgverzoek aangemaakt en verstuurd naar __CONTACT_NAME__.
+
+    Totaal: __AMOUNT__
+    Items: __ITEMS_COUNT__
+    Duur: __DURATION_HOURS__ uur
+
+    U wordt op de hoogte gebracht wanneer de betaling is voltooid.
+
+deposit_dispute_button:
+  de: "Streit eröffnen"
+  en: "Start Dispute"
+  es: "Iniciar Disputa"
+  fr: "Ouvrir litige"
+  it: "Apri contestazione"
+  nl: "Geschil openen"
+
+deposit_dispute_initiated:
+  de: |
+    Ein Streit wurde für die Kaution von __AMOUNT__ eröffnet.
+
+    Bitte senden Sie Fotos des Ausrüstungszustands und eine kurze Erklärung des Problems. Unser Team wird prüfen und sich in Kürze bei Ihnen melden.
+  en: |
+    A dispute has been opened for the security deposit of __AMOUNT__.
+
+    Please send photos of the gear condition and a brief explanation of the issue. Our team will review and contact you shortly.
+  es: |
+    Se ha abierto una disputa para el depósito de garantía de __AMOUNT__.
+
+    Por favor envía fotos del estado del equipo y una breve explicación del problema. Nuestro equipo revisará y te contactará en breve.
+  fr: |
+    Un litige a été ouvert pour le dépôt de garantie de __AMOUNT__.
+
+    Veuillez envoyer des photos de l'état de l'équipement et une brève explication du problème. Notre équipe examinera et vous contactera sous peu.
+  it: |
+    È stata aperta una contestazione per il deposito cauzionale di __AMOUNT__.
+
+    Invia foto dello stato dell'attrezzatura e una breve spiegazione del problema. Il nostro team esaminerà e ti contatterà a breve.
+  nl: |
+    Er is een geschil geopend voor de borgsom van __AMOUNT__.
+
+    Stuur alsjeblieft foto's van de staat van de uitrusting en een korte uitleg van het probleem. Ons team zal het beoordelen en binnenkort contact opnemen.
+
+deposit_dispute_notif_counterparty:
+  de: |
+    ⚠️ __INITIATOR_NAME__ hat einen Streit für die Kaution von __AMOUNT__ eröffnet.
+
+    Bitte senden Sie Fotos des Ausrüstungszustands und Ihre Erklärung. Unser Team wird beide Seiten prüfen und sich in Kürze bei Ihnen melden.
+  en: |
+    ⚠️ __INITIATOR_NAME__ has opened a dispute for the security deposit of __AMOUNT__.
+
+    Please send photos of the gear condition and your explanation. Our team will review both sides and contact you shortly.
+  es: |
+    ⚠️ __INITIATOR_NAME__ ha abierto una disputa para el depósito de garantía de __AMOUNT__.
+
+    Por favor envía fotos del estado del equipo y tu explicación. Nuestro equipo revisará ambos lados y te contactará en breve.
+  fr: |
+    ⚠️ __INITIATOR_NAME__ a ouvert un litige pour le dépôt de garantie de __AMOUNT__.
+
+    Veuillez envoyer des photos de l'état de l'équipement et votre explication. Notre équipe examinera les deux parties et vous contactera sous peu.
+  it: |
+    ⚠️ __INITIATOR_NAME__ ha aperto una contestazione per il deposito cauzionale di __AMOUNT__.
+
+    Invia foto dello stato dell'attrezzatura e la tua spiegazione. Il nostro team esaminerà entrambe le parti e ti contatterà a breve.
+  nl: |
+    ⚠️ __INITIATOR_NAME__ heeft een geschil geopend voor de borgsom van __AMOUNT__.
+
+    Stuur alsjeblieft foto's van de staat van de uitrusting en je uitleg. Ons team zal beide kanten beoordelen en binnenkort contact opnemen.
+
+deposit_duration_mismatch:
+  de: |
+    Die Mietdauer stimmt nicht überein. Eigentümer wählte __OWNER_HOURS__ Stunde(n), aber Sie wählten __RENTER_HOURS__ Stunde(n).
+
+    Die Kautionsanfrage wurde storniert. Der Eigentümer kann eine neue Anfrage mit der richtigen Dauer erstellen.
+  en: |
+    The rental duration didn't match. Owner selected __OWNER_HOURS__ hour(s), but you selected __RENTER_HOURS__ hour(s).
+
+    The deposit request has been cancelled. The owner can create a new request with the correct duration.
+  es: |
+    La duración del alquiler no coincide. El propietario seleccionó __OWNER_HOURS__ hora(s), pero tú seleccionaste __RENTER_HOURS__ hora(s).
+
+    La solicitud de depósito ha sido cancelada. El propietario puede crear una nueva solicitud con la duración correcta.
+  fr: |
+    La durée de location ne correspond pas. Le propriétaire a sélectionné __OWNER_HOURS__ heure(s), mais vous avez sélectionné __RENTER_HOURS__ heure(s).
+
+    La demande de dépôt a été annulée. Le propriétaire peut créer une nouvelle demande avec la bonne durée.
+  it: |
+    La durata del noleggio non corrisponde. Il proprietario ha selezionato __OWNER_HOURS__ ora/e, ma tu hai selezionato __RENTER_HOURS__ ora/e.
+
+    La richiesta di deposito è stata annullata. Il proprietario può creare una nuova richiesta con la durata corretta.
+  nl: |
+    De verhuurduur komt niet overeen. Eigenaar selecteerde __OWNER_HOURS__ uur, maar jij selecteerde __RENTER_HOURS__ uur.
+
+    De borgsomaaanvraag is geannuleerd. De eigenaar kan een nieuw verzoek maken met de juiste duur.
+
+deposit_field_amount_label:
+  de: "Betrag"
+  en: "Amount"
+  es: "Monto"
+  fr: "Montant"
+  it: "Importo"
+  nl: "Bedrag"
+
+deposit_field_confirm:
+  de: "Kannst du die Kautionsdetails bestätigen?"
+  en: "Could you confirm the deposit details?"
+  es: "¿Puedes confirmar los detalles del depósito?"
+  fr: "Pouvez-vous confirmer les détails du dépôt ?"
+  it: "Puoi confermare i dettagli del deposito?"
+  nl: "Kun je de borgsom details bevestigen?"
+
+deposit_field_currency_label:
+  de: "Währung"
+  en: "Currency"
+  es: "Moneda"
+  fr: "Devise"
+  it: "Valuta"
+  nl: "Valuta"
+
+deposit_field_duration_label:
+  de: "Dauer (Stunden)"
+  en: "Duration (hours)"
+  es: "Duración (horas)"
+  fr: "Durée (heures)"
+  it: "Durata (ore)"
+  nl: "Duur (uren)"
+
+deposit_field_extraction_error:
+  de: "Ich habe das nicht ganz verstanden. Kannst du mir Betrag, Währung (EUR/USD/GBP) und Anzahl der Stunden (2-72) sagen?"
+  en: "I didn't quite understand. Could you tell me the amount, currency (EUR/USD/GBP), and number of hours (2-72)?"
+  es: "No entendí bien. ¿Puedes decirme el monto, moneda (EUR/USD/GBP) y número de horas (2-72)?"
+  fr: "Je n'ai pas bien compris. Pourriez-vous me dire le montant, la devise (EUR/USD/GBP) et le nombre d'heures (2-72) ?"
+  it: "Non ho capito bene. Puoi dirmi l'importo, la valuta (EUR/USD/GBP) e il numero di ore (2-72)?"
+  nl: "Ik begreep het niet helemaal. Kun je me het bedrag, valuta (EUR/USD/GBP) en aantal uren (2-72) vertellen?"
+
+deposit_field_known_prefix:
+  de: "Ich habe bereits:"
+  en: "I already have:"
+  es: "Ya tengo:"
+  fr: "J'ai déjà :"
+  it: "Ho già:"
+  nl: "Ik heb al:"
+
+deposit_field_question_amount:
+  de: "Welchen Betrag möchtest du für die Kaution?"
+  en: "What amount do you want for the security deposit?"
+  es: "¿Qué monto quieres para el depósito de garantía?"
+  fr: "Quel montant voulez-vous pour le dépôt de garantie ?"
+  it: "Quale importo vuoi per il deposito cauzionale?"
+  nl: "Welk bedrag wil je voor de borgsom?"
+
+deposit_field_question_currency:
+  de: "Welche Währung? (EUR, USD oder GBP)"
+  en: "What currency? (EUR, USD, or GBP)"
+  es: "¿Qué moneda? (EUR, USD o GBP)"
+  fr: "Quelle devise ? (EUR, USD ou GBP)"
+  it: "Quale valuta? (EUR, USD o GBP)"
+  nl: "Welke valuta? (EUR, USD of GBP)"
+
+deposit_field_question_duration_hours:
+  de: "Wie viele Stunden wird die Miete dauern? (2-72)"
+  en: "How many hours will the rental be? (2-72)"
+  es: "¿Cuántas horas será el alquiler? (2-72)"
+  fr: "Combien d'heures durera la location ? (2-72)"
+  it: "Per quante ore sarà il noleggio? (2-72)"
+  nl: "Hoeveel uur duurt de verhuur? (2-72)"
+
+deposit_field_question_multiple:
+  de: "Was sind __FIELDS__ für die Kaution?"
+  en: "What are the __FIELDS__ for the security deposit?"
+  es: "¿Cuáles son __FIELDS__ del depósito de garantía?"
+  fr: "Quels sont __FIELDS__ du dépôt de garantie ?"
+  it: "Quali sono __FIELDS__ per il deposito cauzionale?"
+  nl: "Wat zijn __FIELDS__ voor de borgsom?"
+
+deposit_invalid_value_format:
+  de: "Bitte geben Sie eine gültige Zahl ein (z.B. 800 oder 1250.50)"
+  en: "Please enter a valid number (e.g., 800 or 1250.50)"
+  es: "Por favor ingresa un número válido (ej: 800 o 1250.50)"
+  fr: "Veuillez entrer un nombre valide (ex : 800 ou 1250.50)"
+  it: "Inserisci un numero valido (es: 800 o 1250.50)"
+  nl: "Voer een geldig nummer in (bijv. 800 of 1250.50)"
+
+deposit_item_added:
+  de: |
+    __ITEM__ - __VALUE__ ✓
+
+    Aktueller Gesamtbetrag: __TOTAL__
+
+    Weiteren Artikel hinzufügen?
+  en: |
+    __ITEM__ - __VALUE__ ✓
+
+    Current total: __TOTAL__
+
+    Add another item?
+  es: |
+    __ITEM__ - __VALUE__ ✓
+
+    Total actual: __TOTAL__
+
+    ¿Agregar otro ítem?
+  fr: |
+    __ITEM__ - __VALUE__ ✓
+
+    Total actuel : __TOTAL__
+
+    Ajouter un autre article ?
+  it: |
+    __ITEM__ - __VALUE__ ✓
+
+    Totale attuale: __TOTAL__
+
+    Aggiungere un altro articolo?
+  nl: |
+    __ITEM__ - __VALUE__ ✓
+
+    Huidige totaal: __TOTAL__
+
+    Nog een item toevoegen?
+
+deposit_missing_amount:
+  de: |
+    Sie möchten eine Kaution in __CURRENCY__, haben aber den Betrag nicht angegeben.
+
+    Beispiel: "Kaution von 500 __CURRENCY__ anfordern"
+  en: |
+    You want a deposit in __CURRENCY__ but didn't specify the amount.
+
+    Example: "Request deposit of 500 __CURRENCY__"
+  es: |
+    Quieres un depósito en __CURRENCY__ pero no especificaste el monto.
+
+    Ejemplo: "Solicitar depósito de 500 __CURRENCY__"
+  fr: |
+    Vous voulez un dépôt en __CURRENCY__ mais n'avez pas spécifié le montant.
+
+    Exemple : "Demander un dépôt de 500 __CURRENCY__"
+  it: |
+    Vuoi un deposito in __CURRENCY__ ma non hai specificato l'importo.
+
+    Esempio: "Richiedi deposito di 500 __CURRENCY__"
+  nl: |
+    Je wilt een borgsom in __CURRENCY__ maar hebt het bedrag niet opgegeven.
+
+    Voorbeeld: "Vraag borgsom van 500 __CURRENCY__ aan"
+
+deposit_missing_amount_and_currency:
+  de: |
+    Um eine Kaution anzufordern, geben Sie bitte sowohl den Betrag als auch die Währung an (USD, EUR oder GBP).
+
+    Beispiel: "Kaution von 500 USD anfordern"
+  en: |
+    To request a security deposit, please specify both the amount and currency (USD, EUR, or GBP).
+
+    Example: "Request deposit of 500 USD"
+  es: |
+    Para solicitar un depósito de garantía, por favor especifica el monto y la moneda (USD, EUR o GBP).
+
+    Ejemplo: "Solicitar depósito de 500 USD"
+  fr: |
+    Pour demander un dépôt de garantie, veuillez spécifier à la fois le montant et la devise (USD, EUR ou GBP).
+
+    Exemple : "Demander un dépôt de 500 USD"
+  it: |
+    Per richiedere un deposito cauzionale, specifica sia l'importo che la valuta (USD, EUR o GBP).
+
+    Esempio: "Richiedi deposito di 500 USD"
+  nl: |
+    Om een borgsom aan te vragen, geef zowel het bedrag als de valuta op (USD, EUR of GBP).
+
+    Voorbeeld: "Vraag borgsom van 500 USD aan"
+
+deposit_missing_currency:
+  de: |
+    Sie haben __AMOUNT__ erwähnt, aber keine Währung angegeben. Bitte geben Sie USD, EUR oder GBP an.
+
+    Beispiel: "Kaution von __AMOUNT__ USD anfordern"
+  en: |
+    You mentioned __AMOUNT__ but didn't specify the currency. Please specify USD, EUR, or GBP.
+
+    Example: "Request deposit of __AMOUNT__ USD"
+  es: |
+    Mencionaste __AMOUNT__ pero no especificaste la moneda. Por favor indica USD, EUR o GBP.
+
+    Ejemplo: "Solicitar depósito de __AMOUNT__ USD"
+  fr: |
+    Vous avez mentionné __AMOUNT__ mais n'avez pas spécifié la devise. Veuillez préciser USD, EUR ou GBP.
+
+    Exemple : "Demander un dépôt de __AMOUNT__ USD"
+  it: |
+    Hai menzionato __AMOUNT__ ma non hai specificato la valuta. Specifica USD, EUR o GBP.
+
+    Esempio: "Richiedi deposito di __AMOUNT__ USD"
+  nl: |
+    Je noemde __AMOUNT__ maar specificeerde geen valuta. Geef USD, EUR of GBP op.
+
+    Voorbeeld: "Vraag borgsom van __AMOUNT__ USD aan"
+
+deposit_no_gear_to_rent:
+  de: "Sie müssen Ausrüstung gelistet haben, bevor Sie eine Kaution anfordern können. Verwenden Sie 'Ausrüstung anbieten', um Ihre Ausrüstung zuerst zu listen."
+  en: "You need to have gear listed before requesting a security deposit. Use 'offer gear' to list your equipment first."
+  es: "Necesitas tener equipo publicado antes de solicitar un depósito de garantía. Usa 'ofrecer equipo' para publicar tu equipo primero."
+  fr: "Vous devez avoir du matériel listé avant de demander un dépôt de garantie. Utilisez 'offrir du matériel' pour lister votre équipement d'abord."
+  it: "Devi avere attrezzatura elencata prima di richiedere un deposito cauzionale. Usa 'offrire attrezzatura' per elencare la tua attrezzatura per prima."
+  nl: "Je moet uitrusting vermeld hebben voordat je een borgsom kunt aanvragen. Gebruik 'uitrusting aanbieden' om je uitrusting eerst te vermelden."
+
+deposit_pay_button:
+  de: "Kaution Zahlen"
+  en: "Pay Deposit"
+  es: "Pagar Depósito"
+  fr: "Payer le Dépôt"
+  it: "Paga Deposito"
+  nl: "Borg Betalen"
+
+deposit_release_button:
+  de: "Kaution freigeben"
+  en: "Release Deposit"
+  es: "Liberar Depósito"
+  fr: "Libérer le dépôt"
+  it: "Rilascia deposito"
+  nl: "Borgsom vrijgeven"
+
+deposit_released:
+  de: "Die Kaution von __AMOUNT__ wurde freigegeben. Die Autorisierung auf der Karte des Mieters wurde storniert."
+  en: "The security deposit of __AMOUNT__ has been released. The authorization hold on the renter's card has been cancelled."
+  es: "El depósito de garantía de __AMOUNT__ ha sido liberado. La retención en la tarjeta del arrendatario ha sido cancelada."
+  fr: "Le dépôt de garantie de __AMOUNT__ a été libéré. L'autorisation de prélèvement sur la carte du locataire a été annulée."
+  it: "Il deposito cauzionale di __AMOUNT__ è stato rilasciato. L'autorizzazione sulla carta del locatario è stata annullata."
+  nl: "De borgsom van __AMOUNT__ is vrijgegeven. De autorisatieblocking op de kaart van de huurder is geannuleerd."
+
+deposit_released_renter:
+  de: |
+    Gute Nachrichten! Ihre Kaution von __AMOUNT__ für __OWNER_NAME__ wurde vollständig freigegeben.
+
+    Die Autorisierung auf Ihrer Karte wurde storniert. Sie sollten die Mittel in Kürze wieder verfügbar sehen.
+  en: |
+    Good news! Your security deposit of __AMOUNT__ for __OWNER_NAME__ has been fully released.
+
+    The authorization hold on your card has been cancelled. You should see the funds available again shortly.
+  es: |
+    ¡Buenas noticias! Tu depósito de garantía de __AMOUNT__ para __OWNER_NAME__ ha sido completamente liberado.
+
+    La retención en tu tarjeta ha sido cancelada. Deberías ver los fondos disponibles nuevamente en breve.
+  fr: |
+    Bonne nouvelle ! Votre dépôt de garantie de __AMOUNT__ pour __OWNER_NAME__ a été entièrement libéré.
+
+    L'autorisation de prélèvement sur votre carte a été annulée. Vous devriez voir les fonds disponibles à nouveau sous peu.
+  it: |
+    Buone notizie! Il tuo deposito cauzionale di __AMOUNT__ per __OWNER_NAME__ è stato completamente rilasciato.
+
+    L'autorizzazione sulla tua carta è stata cancellata. Dovresti vedere i fondi nuovamente disponibili a breve.
+  nl: |
+    Goed nieuws! Je borgsom van __AMOUNT__ voor __OWNER_NAME__ is volledig vrijgegeven.
+
+    De autorisatieblocking op je kaart is geannuleerd. Je zou de fondsen binnenkort weer beschikbaar moeten zien.
+
+deposit_reminder_after_consent:
+  de: |
+    Wenn du deine Ausrüstung an einen Fremden vermieten möchtest, denke daran, dass du eine Kaution verlangen kannst.
+    Sag es einfach, und das System wird dich anleiten.
+  en: |
+    When you want to rent your gear to a stranger, remember you can request a security deposit.
+    Just say so, and the system will guide you.
+  es: |
+    Cuando quieras alquilar tu equipo a un desconocido, recuerda que puedes solicitar un depósito de garantía.
+    Sólo dilo, y el sistema te guiará.
+  fr: |
+    Lorsque vous souhaitez louer votre matériel à un inconnu, n'oubliez pas que vous pouvez demander une caution.
+    Dites-le simplement, et le système vous guidera.
+  it: |
+    Quando vuoi noleggiare la tua attrezzatura a uno sconosciuto, ricorda che puoi richiedere un deposito cauzionale.
+    Basta dirlo, e il sistema ti guiderà.
+  nl: |
+    Wanneer je je uitrusting aan een vreemde wilt verhuren, vergeet dan niet dat je een borg kunt vragen.
+    Zeg het gewoon, en het systeem begeleidt je.
+
+deposit_renter_attached_owner_notification:
+  de: "Kontakt erhalten! Wir haben einen Zahlungslink an __RENTER_NAME__ gesendet. Sie werden benachrichtigt, sobald die Kaution autorisiert wurde."
+  en: "Contact received! We've sent a payment link to __RENTER_NAME__. You'll be notified once they authorize the deposit."
+  es: "Contacto recibido! Hemos enviado un link de pago a __RENTER_NAME__. Te notificaremos cuando autorice el depósito."
+  fr: "Contact reçu ! Nous avons envoyé un lien de paiement à __RENTER_NAME__. Vous serez notifié une fois qu'il aura autorisé le dépôt."
+  it: "Contatto ricevuto! Abbiamo inviato un link di pagamento a __RENTER_NAME__. Verrai notificato una volta che autorizza il deposito."
+  nl: "Contact ontvangen! We hebben een betalingslink naar __RENTER_NAME__ gestuurd. Je wordt op de hoogte gebracht zodra ze de borgsom autoriseren."
+
+deposit_renter_checkout_invitation:
+  de: |
+    __OWNER_NAME__ fordert eine Kaution von __AMOUNT__ für eine __DURATION__ Miete an.
+
+    Dies ist nur eine Autorisierungssperre - Ihre Karte wird nicht belastet, es sei denn, es gibt Schäden an der Ausrüstung. Klicken Sie unten zur Autorisierung:
+  en: |
+    __OWNER_NAME__ is requesting a security deposit of __AMOUNT__ for a __DURATION__ rental.
+
+    This is an authorization hold only - your card won't be charged unless there's damage to the equipment. Click below to authorize:
+  es: |
+    __OWNER_NAME__ solicita un depósito de garantía de __AMOUNT__ para un alquiler de __DURATION__.
+
+    Esto es solo una retención de autorización - no se cobrará a tu tarjeta a menos que haya daños al equipo. Haz clic abajo para autorizar:
+  fr: |
+    __OWNER_NAME__ demande un dépôt de garantie de __AMOUNT__ pour une location de __DURATION__.
+
+    Il s'agit uniquement d'une autorisation de blocage - votre carte ne sera pas débitée sauf en cas de dommages à l'équipement. Cliquez ci-dessous pour autoriser :
+  it: |
+    __OWNER_NAME__ richiede un deposito cauzionale di __AMOUNT__ per un noleggio di __DURATION__.
+
+    Questa è solo un'autorizzazione di blocco - la tua carta non verrà addebitata a meno che non ci siano danni all'attrezzatura. Clicca qui sotto per autorizzare:
+  nl: |
+    __OWNER_NAME__ vraagt een borgsom van __AMOUNT__ aan voor een __DURATION__ verhuur.
+
+    Dit is alleen een autorisatieblokkering - je kaart wordt niet belast tenzij er schade is aan de apparatuur. Klik hieronder om te autoriseren:
+
+deposit_request_contact:
+  de: |
+    Kautionsübersicht:
+
+    __ITEMS_SUMMARY__
+
+    Gesamt: __TOTAL__
+    Dauer: __DURATION__
+
+    Teilen Sie jetzt den Kontakt des Mieters, um die Kaution anzufordern.
+  en: |
+    Security deposit summary:
+
+    __ITEMS_SUMMARY__
+
+    Total: __TOTAL__
+    Duration: __DURATION__
+
+    Now share the renter's contact so we can request the security deposit from them.
+  es: |
+    Resumen del depósito de garantía:
+
+    __ITEMS_SUMMARY__
+
+    Total: __TOTAL__
+    Duración: __DURATION__
+
+    Ahora comparte el contacto del arrendatario para solicitarle el depósito de garantía.
+  fr: |
+    Résumé du dépôt de garantie :
+
+    __ITEMS_SUMMARY__
+
+    Total : __TOTAL__
+    Durée : __DURATION__
+
+    Partagez maintenant le contact du locataire pour lui demander le dépôt de garantie.
+  it: |
+    Riepilogo del deposito cauzionale:
+
+    __ITEMS_SUMMARY__
+
+    Totale: __TOTAL__
+    Durata: __DURATION__
+
+    Ora condividi il contatto del locatario per richiedere il deposito cauzionale.
+  nl: |
+    Borgsom overzicht:
+
+    __ITEMS_SUMMARY__
+
+    Totaal: __TOTAL__
+    Duur: __DURATION__
+
+    Deel nu het contact van de huurder om de borgsom aan te vragen.
+
+deposit_request_header:
+  de: "Kautionsanfrage"
+  en: "Security Deposit Request"
+  es: "Solicitud de Depósito"
+  fr: "Demande de Dépôt"
+  it: "Richiesta Deposito"
+  nl: "Borgverzoek"
+
+deposit_request_to_renter:
+  de: |
+    __OWNER_NAME__ bittet um eine Kaution für die Miete der Ausrüstung.
+
+    Artikel (__ITEMS_COUNT__):
+    __ITEMS_TEXT__
+
+    Gesamt: __AMOUNT__
+    Dauer: __DURATION_HOURS__ Stunde(n)
+
+    Die Kaution wird einbehalten und zurückgegeben, wenn Sie die Ausrüstung in gutem Zustand zurückgeben.
+  en: |
+    __OWNER_NAME__ is requesting a security deposit for renting their equipment.
+
+    Items (__ITEMS_COUNT__):
+    __ITEMS_TEXT__
+
+    Total: __AMOUNT__
+    Duration: __DURATION_HOURS__ hour(s)
+
+    The deposit will be held and returned when you return the equipment in good condition.
+  es: |
+    __OWNER_NAME__ solicita un depósito de garantía por el alquiler de su equipo.
+
+    Items (__ITEMS_COUNT__):
+    __ITEMS_TEXT__
+
+    Total: __AMOUNT__
+    Duración: __DURATION_HOURS__ hora(s)
+
+    El depósito será retenido y devuelto cuando devuelvas el equipo en buen estado.
+  fr: |
+    __OWNER_NAME__ demande un dépôt de garantie pour la location de son équipement.
+
+    Articles (__ITEMS_COUNT__):
+    __ITEMS_TEXT__
+
+    Total: __AMOUNT__
+    Durée: __DURATION_HOURS__ heure(s)
+
+    Le dépôt sera conservé et restitué lorsque vous rendrez l'équipement en bon état.
+  it: |
+    __OWNER_NAME__ richiede un deposito cauzionale per il noleggio della sua attrezzatura.
+
+    Articoli (__ITEMS_COUNT__):
+    __ITEMS_TEXT__
+
+    Totale: __AMOUNT__
+    Durata: __DURATION_HOURS__ ora/e
+
+    Il deposito sarà trattenuto e restituito quando restituirai l'attrezzatura in buone condizioni.
+  nl: |
+    __OWNER_NAME__ vraagt een borgsom voor het huren van hun uitrusting.
+
+    Items (__ITEMS_COUNT__):
+    __ITEMS_TEXT__
+
+    Totaal: __AMOUNT__
+    Duur: __DURATION_HOURS__ uur
+
+    De borg wordt ingehouden en teruggestort wanneer u de uitrusting in goede staat terugbrengt.
+
+deposit_return_ok_already_released:
+  de: "Die Kaution von __AMOUNT__ wurde bereits von __OWNER_NAME__ freigegeben! Die Autorisierung auf Ihrer Karte sollte in Kürze aufgehoben werden."
+  en: "The deposit of __AMOUNT__ has already been released by __OWNER_NAME__! The authorization hold on your card should be cleared shortly."
+  es: "¡El depósito de __AMOUNT__ ya ha sido liberado por __OWNER_NAME__! La retención en tu tarjeta debería cancelarse en breve."
+  fr: "Le dépôt de __AMOUNT__ a déjà été libéré par __OWNER_NAME__ ! L'autorisation de blocage sur votre carte devrait être annulée sous peu."
+  it: "Il deposito di __AMOUNT__ è già stato rilasciato da __OWNER_NAME__! L'autorizzazione sulla tua carta dovrebbe essere annullata a breve."
+  nl: "De borgsom van __AMOUNT__ is al vrijgegeven door __OWNER_NAME__! De autorisatieblocking op je kaart zou binnenkort moeten worden opgeheven."
+
+deposit_return_ok_button:
+  de: "Rückgabe OK"
+  en: "Return OK"
+  es: "Devolución OK"
+  fr: "Retour OK"
+  it: "Restituzione OK"
+  nl: "Teruggave OK"
+
+deposit_return_ok_owner_notification:
+  de: |
+    ✅ __RENTER_NAME__ hat bestätigt, dass die Rückgabe der Ausrüstung in Ordnung ist.
+
+    Wenn alles in Ordnung ist, geben Sie bitte die Kaution von __AMOUNT__ frei.
+  en: |
+    ✅ __RENTER_NAME__ confirmed that the gear return is OK.
+
+    If everything is in order, please release the security deposit of __AMOUNT__.
+  es: |
+    ✅ __RENTER_NAME__ confirmó que la devolución del equipo está bien.
+
+    Si todo está en orden, por favor libera el depósito de garantía de __AMOUNT__.
+  fr: |
+    ✅ __RENTER_NAME__ a confirmé que le retour de l'équipement est OK.
+
+    Si tout est en ordre, veuillez libérer le dépôt de garantie de __AMOUNT__.
+  it: |
+    ✅ __RENTER_NAME__ ha confermato che la restituzione dell'attrezzatura è OK.
+
+    Se tutto è in ordine, rilascia il deposito cauzionale di __AMOUNT__.
+  nl: |
+    ✅ __RENTER_NAME__ heeft bevestigd dat de teruggave van de uitrusting OK is.
+
+    Als alles in orde is, geef dan de borgsom van __AMOUNT__ vrij.
+
+deposit_return_ok_waiting:
+  de: |
+    Danke für die Bestätigung, dass die Rückgabe in Ordnung ist!
+
+    Wir warten darauf, dass __OWNER_NAME__ die Kaution freigibt. Wenn sie dies nicht bald tun und Sie glauben, dass es ein Problem gibt, können Sie einen Streit eröffnen.
+  en: |
+    Thank you for confirming the return is OK!
+
+    We're waiting for __OWNER_NAME__ to release the deposit. If they don't release it soon and you believe there's an issue, you can open a dispute.
+  es: |
+    ¡Gracias por confirmar que la devolución está bien!
+
+    Estamos esperando que __OWNER_NAME__ libere el depósito. Si no lo libera pronto y crees que hay un problema, puedes abrir una disputa.
+  fr: |
+    Merci de confirmer que le retour est OK !
+
+    Nous attendons que __OWNER_NAME__ libère le dépôt. S'ils ne le libèrent pas bientôt et que vous pensez qu'il y a un problème, vous pouvez ouvrir un litige.
+  it: |
+    Grazie per aver confermato che la restituzione è OK!
+
+    Stiamo aspettando che __OWNER_NAME__ rilasci il deposito. Se non lo rilasciano presto e credi ci sia un problema, puoi aprire una contestazione.
+  nl: |
+    Bedankt voor het bevestigen dat de teruggave OK is!
+
+    We wachten tot __OWNER_NAME__ de borgsom vrijgeeft. Als ze dat niet snel doen en je denkt dat er een probleem is, kun je een geschil openen.
+
+deposit_select_duration:
+  de: |
+    Kautionsprozess für __AMOUNT__ wird gestartet.
+
+    Wie viele Stunden wird die Miete dauern? (2-72)
+  en: |
+    Starting security deposit process for __AMOUNT__.
+
+    How many hours will the rental last? (2-72)
+  es: |
+    Iniciando el proceso de depósito de garantía por __AMOUNT__.
+
+    ¿Cuántas horas durará el alquiler? (2-72)
+  fr: |
+    Début du processus de dépôt de garantie pour __AMOUNT__.
+
+    Combien d'heures durera la location ? (2-72)
+  it: |
+    Avvio del processo di deposito cauzionale per __AMOUNT__.
+
+    Quante ore durerà il noleggio? (2-72)
+  nl: |
+    Borgsom proces starten voor __AMOUNT__.
+
+    Hoeveel uur duurt de verhuur? (2-72)
+
+deposit_select_gear_prompt:
+  de: "Wählen Sie die Ausrüstung aus, die Sie in die Kaution aufnehmen möchten:"
+  en: "Select the gear item you want to include in the deposit:"
+  es: "Selecciona el equipo que quieres incluir en el depósito:"
+  fr: "Sélectionnez l'équipement que vous souhaitez inclure dans le dépôt :"
+  it: "Seleziona l'attrezzatura che vuoi includere nel deposito:"
+  nl: "Selecteer de uitrusting die je wilt opnemen in de borgsom:"
+
+deposit_share_contact_reminder:
+  de: "Bitte teilen Sie den Kontakt des Mieters über die WhatsApp-Kontaktfreigabe (tippen Sie auf + und wählen Sie Kontakt)."
+  en: "Please share the renter's contact using WhatsApp's contact sharing feature (tap the + button and select Contact)."
+  es: "Por favor comparte el contacto del arrendatario usando la función de compartir contacto de WhatsApp (toca el botón + y selecciona Contacto)."
+  fr: "Veuillez partager le contact du locataire en utilisant la fonction de partage de contact de WhatsApp (appuyez sur le bouton + et sélectionnez Contact)."
+  it: "Condividi il contatto del locatario usando la funzione di condivisione contatti di WhatsApp (tocca + e seleziona Contatto)."
+  nl: "Deel het contact van de huurder via de WhatsApp-contactdeling (tik op + en selecteer Contact)."
+
+deposit_show_gear_button:
+  de: "Meine Ausrüstung anzeigen"
+  en: "Show my gear"
+  es: "Ver mi equipo"
+  fr: "Afficher mon équipement"
+  it: "Mostra la mia attrezzatura"
+  nl: "Toon mijn uitrusting"
+
+deposit_showing_partial:
+  de: "Zeige __SHOWN__ von __TOTAL__ Artikeln"
+  en: "Showing __SHOWN__ of __TOTAL__ items"
+  es: "Mostrando __SHOWN__ de __TOTAL__ ítems"
+  fr: "Affichage de __SHOWN__ sur __TOTAL__ articles"
+  it: "Mostrando __SHOWN__ di __TOTAL__ articoli"
+  nl: "Toont __SHOWN__ van __TOTAL__ items"
+
+photo_added_to_agreement:
+  de: "__PHOTOS_COUNT__ Fotos zum Mietvertrag hinzugefügt."
+  en: "__PHOTOS_COUNT__ photos attached to rental agreement."
+  es: "__PHOTOS_COUNT__ fotos adjuntadas al acuerdo de alquiler."
+  fr: "__PHOTOS_COUNT__ photos jointes au contrat de location."
+  it: "__PHOTOS_COUNT__ foto allegate al contratto di noleggio."
+  nl: "__PHOTOS_COUNT__ foto's bijgevoegd bij huurovereenkomst."
