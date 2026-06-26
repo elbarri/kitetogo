@@ -1,112 +1,104 @@
-# Kite4Rent
+# KiteToGo
+A production WhatsApp AI agent marketplace where kitesurfers rent gear from each other. 
 
-A WhatsApp-based platform for managing kite rentals and related services.
+The agent is the primary interface: users describe their needs, the agent understands them, when needed asks follow-up questions, and guides them through either completing a listing or finding gear.
 
-# Requires
-- `brew install ffmpeg`
-- 
-```bash
-git clone https://github.com/ggml-org/whisper.cpp.git
-cmake -B build -D WHISPER_FFMPEG=yes
-cmake --build build
-```
+It uses a **custom orchestration framework**, generating conversational responses with **LangChain** for tool-using/function-calling/MCP Server like functionality by applying IoC concepts to language models.
 
-## Current Features
+I chose Elixir to build the **orchestration layer** because Erlang/OTP solved the hard distributed systems problems (supervision, isolation, message passing) in the 80s and 90s, and those are exactly the patterns the agentic AI field is now converging on.
 
-### WhatsApp Integration
-- Webhook endpoint for receiving WhatsApp messages
-- Support for various message types:
-  - Text messages
-  - Audio messages (with transcription capability)
-  - Images
-  - Location sharing
-  - Polls (to reduce user's need to type or talk to a bare minimum)
-  - Contact sharing (only needed from the server side when providing owners contacts)
-  - Stickers (same as before? maybe later on sending cool & funny stickers to users on certain milestones/stages)
+The hard unsolved problems are specifically about LLM non-determinism, trust, and semantic correctness. I address them coordinating how LLM calls are sequenced, how results flow between components, how routing decisions are made, and how multi-turn state is managed.
 
-### Message Processing
-- Asynchronous message processing
-- Media file handling and storage
-- Message persistence with user association
-- Support for both incoming and outgoing messages
+Specifically:
 
-### Database Structure
+- The parallel extraction (Task.async_many over intent + gear + location) is custom code
+- The routing logic (rules engine → intent handler → flow handler) is custom
+- The conversation state machine (what step are we on, what's missing, what's next) is custom, persisted via Ecto to Postgres
+- The LLM fallback chain (try OpenRouter → Gemini → Haiku → Llama) is custom HTTP logic
+- The feature-flag-gated rollout of new extractors is custom
 
-#### Message Types
-Predefined message types stored in the database:
-- Text messages
-- Audio messages
-- Image messages
-- Location messages
-- Contact messages
-- Sticker messages
+---
 
-#### WhatsApp Messages
-Messages are stored with the following attributes:
-- `message_id`: Unique identifier from WhatsApp
-- `phone_number`: The phone number involved in the message
-- `timestamp`: When the message was sent/received
-- `content`: Message content (varies by type)
-- `wa_id`: WhatsApp ID of the contact
-- `media_path`: Path to stored media files (if applicable)
-- `media_mime_type`: MIME type of media files (if applicable)
-- `is_incoming`: Boolean indicating message direction
-- Associations:
-  - `user_id`: Reference to user
+## Architecture TLDR
 
-### User Management
-- Automatic user creation from WhatsApp contacts
-- User association with messages
-- Basic user profile storage
+When a user sends a message, the agent runs a **parallel extraction pipeline**. Based on the classified intent and confidence score, a **rules engine routes the message** to specialized handlers. For ambiguous or conversational messages, it delegates to a **LangChain-powered tool-using** handler that calls real database functions (gear availability, locations) rather than hallucinating answers. For complex operations like publishing gear or collecting a security deposit, the agent enters multi-step conversation flows — persistent state machines backed by PostgreSQL so they survive application restarts.
 
-## Technical Stack
-- Elixir/Phoenix (elixir can scale massively and i am experienced in scaling systems)
-- PostgreSQL
-- WhatsApp Business API
+## Architecture 
 
-## Business Plan
-This project goal is to make money. And have fun while building it. And that means imagining a user's perspective from a design thinking POV, hence making the experience so worthwhile that word of mouth is spreaded; winning then the most difficult part: distribution.
+The agent processes every incoming WhatsApp message through a layered pipeline:
 
-The intention of this app is to have it easy for users to publish kitesurfing gear they are willing to rent and connect them with the other end of the market: those who want to rent.
+**1. Audio → Text (when needed)**
+Voice messages are transcribed via AssemblyAI or a local Whisper instance before entering the pipeline.
 
-Are there other potential use cases? Certainly! But the goal initially is to be laser focused on getting the MVP working, with an ever improving user experience which leverages the modern communication features enabled by whatsapp's business api paired together with modern LLM solutions capable of understanding not only text and its meaning but also audio paired with RAG functionality. 
+**2. Parallel Extraction**
+Three LLM calls fire concurrently using `Task.async_many`:
+- **Intent classifier** — outputs one of 8 intents (`offer_gear`, `request_gear`, `check_availability`, etc.) with a confidence score (0.0–1.0) and a `doubt_asked_likelihood` score
+- **Gear extractor** — pulls structured entities: gear type, brand, model, size, year, condition — validated against known brand reference tables
+- **Location extractor** — extracts a named place with confidence, filtering out vague phrases like "around here"
 
-Language will not be a barrier; user's native language would be they way he will communicate with the app. His native language can be either inferred from his first message sent to the bot (btw I use bot & app intercheangeably) or from the country code from the message's phone number. 
+All extractors use **InstructorLite** (an Elixir library) to force the LLM into validated, schema-typed outputs via structured output / JSON mode.
 
-The business will receive money and then provide the contacts of those owners who match the renters criteria (initially location bound to a few kms) 
+**3. Intent Routing**
+A **rules engine** (Wongi, a Rete-based engine) asserts facts from the extracted data and dispatches to the appropriate handler. If confidence is below 0.75 or the user is asking a question (`doubt_asked_likelihood ≥ 0.6`), the message is redirected to the conversational handler.
 
-## MVP
-It allows for the rental of bidirectional kiteboards, AKA twintips. Is most important attributes are brand, model, size and approximate year of construction.
+**4. Intent Handlers**
+Each intent has a dedicated handler. The most complex is the **ChatHandler**, which uses LangChain with function calling. The LLM has access to tools it must call rather than guess: `search_locations`, `get_gear_availability`, `get_feature_guide`. The system prompt explicitly instructs it to never assume data exists — always call the tools.
 
-Owners should be able to upload the location where they are publishing their gear. They can also mention if the gear is to be picked up at their place, another place or if owner and renter would be meeting at the kite spot. And of course the owner defines how much he is willing to rent his gear for and for how long. 
+**5. Multi-Step Conversation Flows**
+For complex operations (publishing gear, collecting a deposit), the agent enters a **state machine flow** persisted to PostgreSQL. Each flow tracks which fields have been collected, which are missing, and what step the user is on. This survives application restarts — a deliberate choice over in-memory GenServers.
 
-MVP will not provide a deposit feature where the owner can request a safety deposit in case something happens.
+**6. Language Detection & Translation**
+The pipeline auto-detects the user's language. For the 6 natively supported languages (EN, ES, FR, DE, NL, IT), responses are rendered from templates. For anything else, an LLM call translates on the fly using few-shot examples.
 
-TDB: how can a renter filter and view which gear is available.
+---
 
-If audios are not part of the MVP then polls are to be used as a mean of easing the user's input.
+## The Agent's Responsibilities
 
-Gear pictures can be uploaded. But gear pics might not be shared with the renter in this MVP's first version.
+- Understanding free-text gear descriptions in any language and turning them into structured listings
+- Routing ambiguous messages to a conversational handler that asks clarifying questions
+- Managing multi-turn dialogues to collect missing information without losing context across sessions
+- Matching renters with available gear based on type, size, and location
+- Handling security deposit flows end-to-end
+- Dynamically labeling users as schools vs. individuals based on behavioral signals
 
-They payment in the MVP would be a call to stripe's api. And the renter would get a max of 3 contacts for the requestd rental location/area.
+---
 
-### Interation session
+## Tools and Data Sources
 
-OWNER:
-* User sends message. 
-* Msg and user details are stored
-* Bot greets, shortly explains what this bot is about and sends poll asking if user is an owner or renter. It also records this event in the DB
-... (all user interactions will be recorded in the DB, in any direction)...
-* Owner says he has a board available.
-* Bot asks user to attach location of the gear.
-* Bot asks to send 4 messages: brand, model name, size (example: 139x42), rough year
-* Bot asks if user wants to upload some pics and proceeds to download them.
-* Bot asks if board is to be delivered at kite spot.
-* Bot asks for rental price for the kite session.
-* Bot thanks and ends chat session.
+| Tool / Source | Purpose |
+|---|---|
+| **OpenRouter** | Primary LLM provider (structured extraction + chat) |
+| **Gemini / Claude Haiku / Llama** | Automatic fallback if OpenRouter fails |
+| **InstructorLite** | Structured output extraction with Ecto schema validation |
+| **LangChain (Elixir)** | Tool-calling loop in the conversational handler |
+| **AssemblyAI + Whisper** | Audio transcription |
+| **Nominatim** | Geocoding location strings to coordinates |
+| **PostgreSQL + PostGIS** | Gear listings, conversation state, spatial proximity queries |
+| **WhatsApp Business Cloud API** | Inbound/outbound message transport |
 
-RENTER:
-* TDB
+---
 
+## Deployment
 
-# Future itearions
+The agent runs on a **Hetzner VPS** managed via **Coolify** (self-hosted PaaS). It's packaged as a Docker container built from an Elixir release. PostgreSQL runs in a separate container on the same host with PostGIS and pgvector extensions.
+
+Deployments are triggered via Coolify's webhook integration — push to `master`, the container rebuilds and restarts with zero-downtime swap.
+
+---
+
+## Main Production Challenges
+
+**1. Stale Docker build cache serving old BEAM files**
+After a refactor, the deployed container was still running old code because Docker cached the compiled artifacts. The fix required running `docker builder prune -af` to force a full rebuild. Now we treat suspicious behavior post-deploy as a cache issue first.
+
+**2. OTP 28 crashing on empty DNS labels**
+Upgrading to OTP 28 introduced a crash in `:inet_dns.encode_labels/4` when DNS responses contained empty labels — a subtle BEAM runtime bug, not application code. Required patching the DNS configuration in the release environment.
+
+**3. Coolify pre-deployment commands running on the crashing container**
+If the app container was crash-looping, Coolify's pre-deployment hooks (which run on the *existing* container) would fail instantly, making it impossible to deploy a fix. The workaround was to SSH in and manually bring the container to a stable state before triggering deployment.
+
+**4. Structured extraction reliability**
+Early versions used free-text LLM responses and then tried to parse them. Switching to InstructorLite with strict Ecto schemas (with validation changesets) eliminated an entire class of parse errors and made the extraction deterministic enough for production.
+
+**5. Conversation state surviving restarts**
+The naive approach of keeping conversation flow state in a GenServer meant every deploy wiped in-progress user conversations. Moving state to PostgreSQL with a 24-hour TTL solved this — users can pick up a conversation after a deploy without noticing anything.
